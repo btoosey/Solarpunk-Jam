@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://b17qw8h3p56hn"]
+[gd_scene load_steps=4 format=3 uid="uid://b17qw8h3p56hn"]
 
+[ext_resource type="Script" path="res://scenes/character/scripts/character.gd" id="1_41qnt"]
 [ext_resource type="Texture2D" uid="uid://ebawa2g15esw" path="res://assets/sprites/characters/character01_v1.png" id="1_t1w4b"]
+[ext_resource type="Script" path="res://scenes/character/components/grid_mover.gd" id="2_k5lh0"]
 
-[node name="Character" type="Node2D"]
+[node name="Character" type="Node2D" node_paths=PackedStringArray("grid_mover") groups=["characters"]]
+script = ExtResource("1_41qnt")
+grid_mover = NodePath("GridMover")
 
 [node name="CharacterSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_t1w4b")
+
+[node name="GridMover" type="Node2D" parent="."]
+script = ExtResource("2_k5lh0")
+speed = 1.3
