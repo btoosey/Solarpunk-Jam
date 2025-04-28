@@ -5,6 +5,7 @@ extends Node2D
 @export var speed: float
 
 @onready var ground: TileMapLayer = $"../../../Tilemaps/Ground"
+@onready var walls: TileMapLayer = $"../../../Tilemaps/Walls"
 
 var is_moving := false
 
@@ -24,8 +25,14 @@ func move(direction: Vector2i) -> void:
 	var current_tile: Vector2i = ground.local_to_map(get_parent().global_position)
 	var target_tile: Vector2i = current_tile + direction
 
+
+	var target_tile_data: TileData = walls.get_cell_tile_data(target_tile)
+
+	if target_tile_data != null and target_tile_data.get_custom_data('wall_obstacle'):
+		return
+
+
+	is_moving = true
 	get_parent().global_position = ground.map_to_local(target_tile)
 	get_parent().character_sprite.global_position = ground.map_to_local(current_tile)
 	current_tile = ground.local_to_map(get_parent().global_position)
-
-	is_moving = true
