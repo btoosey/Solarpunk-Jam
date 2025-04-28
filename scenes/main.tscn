@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=9 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="1_74a5t"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="2_b8xkv"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="2_vmy21"]
+[ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="4_56ctf"]
+[ext_resource type="Resource" uid="uid://0avwthljtuj0" path="res://data/characters/character_02.tres" id="5_cnjw0"]
 
 [sub_resource type="TileSet" id="TileSet_sw21o"]
 tile_size = Vector2i(32, 32)
@@ -131,7 +133,9 @@ script = ExtResource("2_vmy21")
 [node name="Character" parent="Characters" instance=ExtResource("2_b8xkv")]
 z_index = 1
 position = Vector2(112, 112)
+stats = ExtResource("4_56ctf")
 
 [node name="Character2" parent="Characters" instance=ExtResource("2_b8xkv")]
 z_index = 1
 position = Vector2(176, 112)
+stats = ExtResource("5_cnjw0")
