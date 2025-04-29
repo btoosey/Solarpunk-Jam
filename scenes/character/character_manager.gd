@@ -44,9 +44,14 @@ func move_characters(direction) -> void:
 
 
 func _on_character_touched_hazard() -> void:
+	var pre_reload_log
+	var pre_reload_turn
+
 	for c in characters:
 		c.grid_mover.can_move = false
 		c.can_interact = false
 	await get_tree().create_timer(1).timeout
 
 	get_tree().reload_current_scene()
+
+	
