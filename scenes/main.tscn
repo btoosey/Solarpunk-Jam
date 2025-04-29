@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=11 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="1_74a5t"]
 [ext_resource type="Script" path="res://scenes/level/main.gd" id="1_dypx8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="2_vmy21"]
 [ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="4_56ctf"]
 [ext_resource type="Resource" uid="uid://0avwthljtuj0" path="res://data/characters/character_02.tres" id="5_cnjw0"]
+[ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="7_6jn42"]
 
 [sub_resource type="TileSet" id="TileSet_sw21o"]
 tile_size = Vector2i(32, 32)
@@ -125,7 +126,7 @@ tile_set = SubResource("TileSet_sw21o")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
-tile_map_data = PackedByteArray("AAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAgAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAcAAAAAAAMAAAAKAAgAAAAAAAMAAAAKAAYAAAAAAAMAAAAKAAUAAAAAAAMAAAAKAAQAAAAAAAMAAAAKAAMAAAAAAAMAAAAKAAIAAAAAAAMAAAAHAAQAAAAAAAMAAAAEAAYAAAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAgAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAgAAAAAAAMAAAAHAAQAAAAAAAMAAAAEAAYAAAAAAAMAAAALAAEAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAgAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
 
@@ -141,3 +142,11 @@ stats = ExtResource("4_56ctf")
 z_index = 1
 position = Vector2(176, 112)
 stats = ExtResource("5_cnjw0")
+
+[node name="CharacterCamera" type="Camera2D" parent="."]
+position = Vector2(171, 145)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+script = ExtResource("7_6jn42")
+movement_enabled = true
