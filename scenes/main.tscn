@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=14 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="1_74a5t"]
 [ext_resource type="Script" path="res://scenes/level/main.gd" id="1_dypx8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d1u45op0b501d" path="res://scenes/hazards/hazard.tscn" id="7_0b08x"]
 [ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="7_6jn42"]
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="8_ubc74"]
+[ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_wcq76"]
 
 [sub_resource type="TileSet" id="TileSet_sw21o"]
 tile_size = Vector2i(32, 32)
@@ -154,9 +155,13 @@ position = Vector2(80, 80)
 position = Vector2(144, 80)
 
 [node name="Collectibles" type="Node2D" parent="."]
+script = ExtResource("8_wcq76")
 
 [node name="Collectible" parent="Collectibles" instance=ExtResource("8_ubc74")]
 position = Vector2(80, 176)
+
+[node name="Collectible2" parent="Collectibles" instance=ExtResource("8_ubc74")]
+position = Vector2(176, 176)
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
 position = Vector2(144, 112)

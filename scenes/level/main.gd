@@ -2,6 +2,7 @@ extends Node2D
 
 
 @onready var characters: Node2D = $Characters
+@onready var collectibles: Node2D = $Collectibles
 
 var level_log: Array
 var turn_number := 0
@@ -10,6 +11,7 @@ var turn_number := 0
 func _ready() -> void:
 	characters.undo.connect(_on_undo)
 	characters.characters_moved.connect(log_level_state)
+	collectibles.level_complete.connect(_on_level_completed)
 	log_level_state()
 
 
@@ -32,3 +34,7 @@ func log_level_state() -> void:
 	if level_log.size() == 0 or level_log[-1] != new_state:
 		level_log.append(new_state)
 		turn_number += 1
+
+
+func _on_level_completed() -> void:
+	print("level complete")
