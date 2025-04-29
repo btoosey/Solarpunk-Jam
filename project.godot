@@ -50,6 +50,8 @@ undo={
 [layer_names]
 
 2d_physics/layer_1="Wall"
+2d_physics/layer_2="Character"
+2d_physics/layer_3="Hazard"
 
 [rendering]
 

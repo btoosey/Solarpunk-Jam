@@ -5,8 +5,11 @@ class_name Character
 
 @export var stats: CharacterStats : set = set_stats
 @export var grid_mover: GridMover
+@export var hazard_detector: HazardDetector
 
 @onready var character_sprite: Sprite2D = $CharacterSprite
+
+var can_interact := true
 
 
 func set_stats(value: CharacterStats) -> void:
