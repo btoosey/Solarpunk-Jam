@@ -8,6 +8,7 @@ extends Node2D
 @onready var walls: TileMapLayer = $"../../../Tilemaps/Walls"
 
 var is_moving := false
+var can_move := true
 
 
 func _physics_process(_delta: float) -> void:
@@ -22,6 +23,9 @@ func _physics_process(_delta: float) -> void:
 
 
 func move(direction: Vector2i) -> void:
+	if not can_move:
+		return
+
 	var current_tile: Vector2i = ground.local_to_map(get_parent().global_position)
 	var target_tile: Vector2i = current_tile + direction
 	var target_tile_data: TileData = walls.get_cell_tile_data(target_tile)
