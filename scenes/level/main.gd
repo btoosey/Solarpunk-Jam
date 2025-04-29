@@ -17,10 +17,15 @@ func _ready() -> void:
 
 func _on_undo() -> void:
 	if level_log.size() > 1:
-		var c_index := 0
-		for c in characters.get_children():
-			c.position = level_log[-2][c_index]
-			c_index += 1
+		var chara_index := 0
+		for chara in characters.get_children():
+			chara.position = level_log[-2][chara_index]
+			chara_index += 1
+
+		for col in collectibles.get_children():
+			if col.turn_collected == level_log.size():
+				col.reset_collectible()
+
 		level_log.pop_back()
 		turn_number -= 1
 
