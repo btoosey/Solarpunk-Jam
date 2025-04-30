@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpskof2wm3lbm"]
+
+[ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_state_machine.gd" id="1_y4tfv"]
+[ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_start_state.gd" id="2_gxkf8"]
+[ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_level_select_state.gd" id="3_r0otn"]
+[ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_play_state.gd" id="4_sug4s"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_y4tfv")
+initial_state = NodePath("GameLevelSelectState")
+
+[node name="GameStartState" type="Node" parent="GameStateMachine"]
+script = ExtResource("2_gxkf8")
+
+[node name="GameLevelSelectState" type="Node" parent="GameStateMachine"]
+script = ExtResource("3_r0otn")
+state = 1
+
+[node name="GamePlayState" type="Node" parent="GameStateMachine"]
+script = ExtResource("4_sug4s")
+state = 2
