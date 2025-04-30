@@ -6,6 +6,7 @@ class_name Character
 @export var stats: CharacterStats : set = set_stats
 @export var grid_mover: GridMover
 @export var hazard_detector: HazardDetector
+@export var character_type: int
 
 @onready var character_sprite: Sprite2D = $CharacterSprite
 
