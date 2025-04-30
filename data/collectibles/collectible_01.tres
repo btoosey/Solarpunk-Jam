@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CollectibleStats" load_steps=3 format=3 uid="uid://b6uhb6w2487h"]
+
+[ext_resource type="Script" path="res://data/collectibles/collectible_data.gd" id="1_1d7vp"]
+[ext_resource type="Texture2D" uid="uid://gqmpqt8cqpi6" path="res://assets/sprites/collectibles/collectible_01_v1.png" id="1_n2o3n"]
+
+[resource]
+script = ExtResource("1_1d7vp")
+collectible_type = 0
+collectible_skin = ExtResource("1_n2o3n")

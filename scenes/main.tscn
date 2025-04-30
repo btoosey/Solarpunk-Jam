@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=16 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="1_74a5t"]
 [ext_resource type="Script" path="res://scenes/level/main.gd" id="1_dypx8"]
@@ -8,6 +8,10 @@
 [ext_resource type="Resource" uid="uid://0avwthljtuj0" path="res://data/characters/character_02.tres" id="5_cnjw0"]
 [ext_resource type="PackedScene" uid="uid://d1u45op0b501d" path="res://scenes/hazards/hazard.tscn" id="7_0b08x"]
 [ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="7_6jn42"]
+[ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="8_ubc74"]
+[ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_wcq76"]
+[ext_resource type="Resource" uid="uid://b6uhb6w2487h" path="res://data/collectibles/collectible_01.tres" id="10_2q34e"]
+[ext_resource type="Resource" uid="uid://co78ig44wucbq" path="res://data/collectibles/collectible_02.tres" id="10_et2cj"]
 
 [sub_resource type="TileSet" id="TileSet_sw21o"]
 tile_size = Vector2i(32, 32)
@@ -143,6 +147,7 @@ stats = ExtResource("4_56ctf")
 z_index = 1
 position = Vector2(176, 112)
 stats = ExtResource("5_cnjw0")
+character_type = 1
 
 [node name="Hazards" type="Node2D" parent="."]
 
@@ -151,6 +156,21 @@ position = Vector2(80, 80)
 
 [node name="Hazard2" parent="Hazards" instance=ExtResource("7_0b08x")]
 position = Vector2(144, 80)
+
+[node name="Collectibles" type="Node2D" parent="."]
+script = ExtResource("8_wcq76")
+
+[node name="Collectible" parent="Collectibles" instance=ExtResource("8_ubc74")]
+position = Vector2(80, 176)
+stats = ExtResource("10_2q34e")
+
+[node name="Collectible2" parent="Collectibles" instance=ExtResource("8_ubc74")]
+position = Vector2(176, 176)
+stats = ExtResource("10_et2cj")
+
+[node name="Collectible3" parent="Collectibles" instance=ExtResource("8_ubc74")]
+position = Vector2(272, 144)
+stats = ExtResource("10_et2cj")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
 position = Vector2(144, 112)
