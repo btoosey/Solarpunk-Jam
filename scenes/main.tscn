@@ -168,6 +168,10 @@ stats = ExtResource("10_2q34e")
 position = Vector2(176, 176)
 stats = ExtResource("10_et2cj")
 
+[node name="Collectible3" parent="Collectibles" instance=ExtResource("8_ubc74")]
+position = Vector2(272, 144)
+stats = ExtResource("10_et2cj")
+
 [node name="CharacterCamera" type="Camera2D" parent="."]
 position = Vector2(144, 112)
 zoom = Vector2(2, 2)
