@@ -5,12 +5,17 @@ signal level_selected(path)
 
 @onready var current_level: LevelIcon = $LevelIcon1
 
+var enabled := false
+
 
 func _ready() -> void:
 	update_level_icon_highlighter_position()
 
 
 func _input(event: InputEvent) -> void:
+	if not enabled:
+		return
+
 	if event.is_action_pressed("ui_up") and current_level.next_level_up:
 		current_level = current_level.next_level_up
 		update_level_icon_highlighter_position()

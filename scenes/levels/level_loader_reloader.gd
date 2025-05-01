@@ -21,10 +21,14 @@ func _on_level_select_level_selected(path: Variant) -> void:
 
 
 func reload_level() -> void:
-	if level.get_child_count() > 0:
-		level.remove_child(level.get_child(0))
+	clear_current_level()
 	instantiate_level()
 
 
 func _on_reload_level() -> void:
 	reload_level()
+
+
+func clear_current_level() -> void:
+	if level.get_child_count() > 0:
+		level.remove_child(level.get_child(0))

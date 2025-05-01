@@ -45,8 +45,13 @@ func move_characters(direction) -> void:
 
 
 func _on_character_touched_hazard() -> void:
-	for c in characters:
-		c.grid_mover.can_move = false
-		c.can_interact = false
+	stop_characters_moving()
 	await get_tree().create_timer(1).timeout
 	reload_level.emit()
+
+
+func stop_characters_moving() -> void:
+	get_parent().allow_undo = false
+	for c in characters:
+		c.grid_mover.can_move = false
+		c.can_interact = false	
