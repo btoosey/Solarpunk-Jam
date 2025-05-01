@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpskof2wm3lbm"]
+[gd_scene load_steps=10 format=3 uid="uid://dpskof2wm3lbm"]
 
+[ext_resource type="Script" path="res://scenes/levels/level_loader_reloader.gd" id="1_c6cci"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_fuqf3"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_state_machine.gd" id="1_y4tfv"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_start_state.gd" id="2_gxkf8"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_level_select_state.gd" id="3_r0otn"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_play_state.gd" id="4_sug4s"]
+[ext_resource type="PackedScene" uid="uid://dto57u0glubq5" path="res://scenes/ui/level_select/level_icon.tscn" id="5_0s6f8"]
+[ext_resource type="Script" path="res://scenes/ui/level_select/level_select.gd" id="5_vqo23"]
+[ext_resource type="Texture2D" uid="uid://c0r2xcawncc6b" path="res://assets/sprites/ui/level_select/level_icons/level_icon_highlighter.png" id="7_3fosn"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_fuqf3")
+
+[node name="LevelLoaderReloader" type="Node" parent="."]
+script = ExtResource("1_c6cci")
 
 [node name="GameStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_y4tfv")
@@ -21,3 +30,48 @@ state = 1
 [node name="GamePlayState" type="Node" parent="GameStateMachine"]
 script = ExtResource("4_sug4s")
 state = 2
+
+[node name="LevelSelect" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_vqo23")
+
+[node name="LevelIcon1" parent="LevelSelect" node_paths=PackedStringArray("next_level_right") instance=ExtResource("5_0s6f8")]
+offset_left = 177.0
+offset_top = 208.0
+offset_right = 217.0
+offset_bottom = 248.0
+next_scene_path = "res://scenes/levels/level_01.tscn"
+next_level_right = NodePath("../LevelIcon2")
+
+[node name="LevelIcon2" parent="LevelSelect" node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("5_0s6f8")]
+offset_left = 356.0
+offset_top = 207.0
+offset_right = 396.0
+offset_bottom = 247.0
+level_name = "01"
+next_level_left = NodePath("../LevelIcon1")
+next_level_right = NodePath("../LevelIcon3")
+
+[node name="LevelIcon3" parent="LevelSelect" node_paths=PackedStringArray("next_level_left") instance=ExtResource("5_0s6f8")]
+offset_left = 408.0
+offset_top = 206.0
+offset_right = 448.0
+offset_bottom = 246.0
+level_name = "02"
+next_level_left = NodePath("../LevelIcon2")
+
+[node name="LevelIconHighlighter" type="TextureRect" parent="LevelSelect"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0
+pivot_offset = Vector2(24, 24)
+texture = ExtResource("7_3fosn")
+
+[node name="Level" type="Node2D" parent="."]
+
+[connection signal="level_selected" from="LevelSelect" to="LevelLoaderReloader" method="_on_level_select_level_selected"]

@@ -3,11 +3,12 @@ extends Node2D
 
 signal undo
 signal characters_moved
+signal reload_level
 
 @onready var characters: Array = get_tree().get_nodes_in_group("characters")
 
 
-func _ready() -> void:
+func connect_hazards_to_reloader() -> void:
 	for c in characters: 
 		c.hazard_detector.touched_hazard.connect(_on_character_touched_hazard)
 
@@ -48,5 +49,4 @@ func _on_character_touched_hazard() -> void:
 		c.grid_mover.can_move = false
 		c.can_interact = false
 	await get_tree().create_timer(1).timeout
-
-	get_tree().reload_current_scene()
+	reload_level.emit()
