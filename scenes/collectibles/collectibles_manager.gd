@@ -7,7 +7,7 @@ signal group_2_completed
 signal group_0_decompleted
 signal group_1_decompleted
 signal group_2_decompleted
-signal level_complete
+signal all_collectibles_collected
 
 @onready var collectibles: Array = get_tree().get_nodes_in_group("collectibles")
 
@@ -42,7 +42,7 @@ func _on_collectible_collected(collectible) -> void:
 
 func check_collected_collectibles() -> void:
 	if collectibles.size() == number_collected:
-		level_complete.emit()
+		all_collectibles_collected.emit()
 
 
 func check_groups_completion() -> void:

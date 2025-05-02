@@ -1,0 +1,12 @@
+extends Node2D
+
+@onready var game_state_machine: GameStateMachine = $GameStateMachine as GameStateMachine
+@onready var level: Node2D = $Level
+
+
+func _ready() -> void:
+	game_state_machine.init()
+
+
+func _on_level_completed() -> void:
+	$LevelSelect.unlock_surrounding_levels()
