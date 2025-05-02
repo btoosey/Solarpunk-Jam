@@ -13,7 +13,7 @@ var allow_undo := true
 func _ready() -> void:
 	characters.undo.connect(_on_undo)
 	characters.characters_moved.connect(log_level_state)
-	collectibles.level_complete.connect(_on_level_completed)
+	collectibles.all_collectibles_collected.connect(_on_level_completed)
 	log_level_state()
 
 
@@ -48,5 +48,6 @@ func log_level_state() -> void:
 
 func _on_level_completed() -> void:
 	characters.stop_characters_moving()
+	$"../../LevelSelect".unlock_surrounding_levels()
 	await get_tree().create_timer(1).timeout
 	game_state_machine._on_transition_requested(game_state_machine.current_state, GameState.State.LEVEL_SELECT)

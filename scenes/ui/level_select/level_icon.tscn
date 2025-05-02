@@ -7,11 +7,14 @@
 font_size = 28
 
 [node name="LevelIcon" type="Control"]
+modulate = Color(1, 1, 1, 0.352941)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_jwdhi")
+level_name = null
+level_name_shorthand = null
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

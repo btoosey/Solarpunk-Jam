@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LevelsData="*res://scripts/globals/levels_data.gd"
+
 [input]
 
 character_up={

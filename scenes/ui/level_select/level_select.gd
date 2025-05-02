@@ -17,17 +17,21 @@ func _input(event: InputEvent) -> void:
 		return
 
 	if event.is_action_pressed("ui_up") and current_level.next_level_up:
-		current_level = current_level.next_level_up
-		update_level_icon_highlighter_position()
+		if LevelsData.level_unlocked_status[current_level.next_level_up.level_name]:
+			current_level = current_level.next_level_up
+			update_level_icon_highlighter_position()
 	if event.is_action_pressed("ui_down") and current_level.next_level_down:
-		current_level = current_level.next_level_down
-		update_level_icon_highlighter_position()
+		if LevelsData.level_unlocked_status[current_level.next_level_down.level_name]:
+			current_level = current_level.next_level_down
+			update_level_icon_highlighter_position()
 	if event.is_action_pressed("ui_left") and current_level.next_level_left:
-		current_level = current_level.next_level_left
-		update_level_icon_highlighter_position()
+		if LevelsData.level_unlocked_status[current_level.next_level_left.level_name]:
+			current_level = current_level.next_level_left
+			update_level_icon_highlighter_position()
 	if event.is_action_pressed("ui_right") and current_level.next_level_right:
-		current_level = current_level.next_level_right
-		update_level_icon_highlighter_position()
+		if LevelsData.level_unlocked_status[current_level.next_level_right.level_name]:
+			current_level = current_level.next_level_right
+			update_level_icon_highlighter_position()
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path:
 			level_selected.emit(current_level.next_scene_path)
@@ -35,3 +39,18 @@ func _input(event: InputEvent) -> void:
 
 func update_level_icon_highlighter_position() -> void:
 	$LevelIconHighlighter.global_position = current_level.global_position
+
+
+func unlock_surrounding_levels() -> void:
+	if current_level.next_level_up:
+		LevelsData.level_unlocked_status[current_level.next_level_up.level_name] = true
+		current_level.next_level_up.modulate.a = 255
+	if current_level.next_level_down:
+		LevelsData.level_unlocked_status[current_level.next_level_down.level_name] = true
+		current_level.next_level_down.modulate.a = 255
+	if current_level.next_level_left:
+		LevelsData.level_unlocked_status[current_level.next_level_left.level_name] = true
+		current_level.next_level_left.modulate.a = 255
+	if current_level.next_level_right:
+		LevelsData.level_unlocked_status[current_level.next_level_right.level_name] = true
+		current_level.next_level_right.modulate.a = 255

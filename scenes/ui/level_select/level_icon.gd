@@ -2,7 +2,9 @@
 class_name LevelIcon
 extends Control
 
-@export var level_name := "00"
+
+@export var level_name := "Level_01"
+@export var level_name_shorthand := "00"
 @export_file("*.tscn") var next_scene_path: String
 @export var next_level_up: LevelIcon
 @export var next_level_down: LevelIcon
@@ -11,4 +13,4 @@ extends Control
 
 
 func _ready() -> void:
-	$Label.text = level_name
+	$Label.text = level_name_shorthand

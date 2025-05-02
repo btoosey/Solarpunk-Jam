@@ -8,5 +8,5 @@ func _ready() -> void:
 	game_state_machine.init()
 
 
-func _on_level_loader_reloader_level_loaded() -> void:
-	level.get_child(0).characters.connect_hazards_to_reloader()
+func _on_level_completed() -> void:
+	$LevelSelect.unlock_surrounding_levels()
