@@ -44,13 +44,18 @@ func update_level_icon_highlighter_position() -> void:
 func unlock_surrounding_levels() -> void:
 	if current_level.next_level_up:
 		LevelsData.level_unlocked_status[current_level.next_level_up.level_name] = true
-		current_level.next_level_up.modulate.a = 255
+		current_level.next_level_up.modulate.a = 1
 	if current_level.next_level_down:
 		LevelsData.level_unlocked_status[current_level.next_level_down.level_name] = true
-		current_level.next_level_down.modulate.a = 255
+		current_level.next_level_down.modulate.a = 1
 	if current_level.next_level_left:
 		LevelsData.level_unlocked_status[current_level.next_level_left.level_name] = true
-		current_level.next_level_left.modulate.a = 255
+		current_level.next_level_left.modulate.a = 1
 	if current_level.next_level_right:
 		LevelsData.level_unlocked_status[current_level.next_level_right.level_name] = true
-		current_level.next_level_right.modulate.a = 255
+		current_level.next_level_right.modulate.a = 1
+
+
+func set_current_level_as_complete() -> void:
+	print(current_level)
+	current_level.modulate.g = 0.3
