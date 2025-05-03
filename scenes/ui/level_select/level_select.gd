@@ -57,5 +57,4 @@ func unlock_surrounding_levels() -> void:
 
 
 func set_current_level_as_complete() -> void:
-	print(current_level)
 	current_level.modulate.g = 0.3

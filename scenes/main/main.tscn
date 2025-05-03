@@ -69,6 +69,7 @@ offset_right = 448.0
 offset_bottom = 246.0
 level_name = "Level_03"
 level_name_shorthand = "03"
+next_scene_path = "res://scenes/levels/level_03.tscn"
 next_level_left = NodePath("../LevelIcon2")
 
 [node name="LevelIconHighlighter" type="TextureRect" parent="LevelSelect"]

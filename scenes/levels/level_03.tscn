@@ -131,7 +131,7 @@ tile_set = SubResource("TileSet_sw21o")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
-tile_map_data = PackedByteArray("AAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAgAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAgAAAAAAAMAAAAHAAQAAAAAAAMAAAAEAAYAAAAAAAMAAAALAAEAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAgAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AAAFAAEAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAALAAEAAAAAAAMAAAAJAAIAAAAAAAMAAAAJAAMAAAAAAAMAAAAJAAQAAAAAAAMAAAAJAAUAAAAAAAMAAAAFAAYAAAAAAAMAAAAOAAUAAAAAAAMAAAAOAAMAAAAAAAMAAAAHAAUAAAAAAAMAAAAGAAYAAAAAAAMAAAAIAAUAAAAAAAMAAAAMAAUAAAAAAAMAAAALAAUAAAAAAAMAAAAKAAUAAAAAAAMAAAAMAAAAAAAAAAMAAAANAAAAAAAAAAMAAAANAAUAAAAAAAMAAAAHAAYAAAAAAAMAAAAFAAUAAAAAAAMAAAAFAAQAAAAAAAMAAAAFAAMAAAAAAAMAAAAEAAMAAAAAAAMAAAAEAAIAAAAAAAMAAAAEAAEAAAAAAAMAAAALAAAAAAAAAAMAAAANAAEAAAAAAAMAAAANAAIAAAAAAAMAAAANAAMAAAAAAAMAAAAOAAQAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
 
@@ -145,35 +145,39 @@ stats = ExtResource("5_3102u")
 
 [node name="Character2" parent="Characters" instance=ExtResource("4_vcu4g")]
 z_index = 1
-position = Vector2(176, 112)
+position = Vector2(368, 112)
 stats = ExtResource("6_1b13l")
 character_type = 1
 
 [node name="Hazards" type="Node2D" parent="."]
 
 [node name="Hazard" parent="Hazards" instance=ExtResource("7_fwx8k")]
-position = Vector2(80, 80)
+position = Vector2(208, 112)
 
 [node name="Hazard2" parent="Hazards" instance=ExtResource("7_fwx8k")]
-position = Vector2(144, 144)
+position = Vector2(400, 112)
 
 [node name="Collectibles" type="Node2D" parent="."]
 script = ExtResource("8_g60uo")
 
 [node name="Collectible" parent="Collectibles" instance=ExtResource("9_m5hun")]
-position = Vector2(80, 176)
+position = Vector2(208, 176)
 stats = ExtResource("10_dgcnf")
 
 [node name="Collectible2" parent="Collectibles" instance=ExtResource("9_m5hun")]
-position = Vector2(176, 176)
-stats = ExtResource("11_ko264")
+position = Vector2(176, 80)
+stats = ExtResource("10_dgcnf")
 
 [node name="Collectible3" parent="Collectibles" instance=ExtResource("9_m5hun")]
-position = Vector2(272, 144)
+position = Vector2(400, 48)
+stats = ExtResource("11_ko264")
+
+[node name="Collectible4" parent="Collectibles" instance=ExtResource("9_m5hun")]
+position = Vector2(432, 144)
 stats = ExtResource("11_ko264")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
-position = Vector2(144, 112)
+position = Vector2(304, 112)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
