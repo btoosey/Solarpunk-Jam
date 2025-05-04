@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpskof2wm3lbm"]
+[gd_scene load_steps=11 format=3 uid="uid://dpskof2wm3lbm"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_loader_reloader.gd" id="1_c6cci"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_fuqf3"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dto57u0glubq5" path="res://scenes/ui/level_select/level_icon.tscn" id="5_0s6f8"]
 [ext_resource type="Script" path="res://scenes/ui/level_select/level_select.gd" id="5_vqo23"]
 [ext_resource type="Texture2D" uid="uid://c0r2xcawncc6b" path="res://assets/sprites/ui/level_select/level_icons/level_icon_highlighter.png" id="7_3fosn"]
+[ext_resource type="Script" path="res://scenes/ui/pause_menu/pause_menu_screen.gd" id="10_224t2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fuqf3")
@@ -102,5 +103,47 @@ pivot_offset = Vector2(24, 24)
 texture = ExtResource("7_3fosn")
 
 [node name="Level" type="Node2D" parent="."]
+
+[node name="PauseMenuScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("10_224t2")
+
+[node name="Panel" type="Panel" parent="PauseMenuScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="PauseMenuScreen"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseMenuScreen/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -29.0
+offset_right = 53.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PauseMenuScreen/Control/PauseMenu"]
+layout_mode = 2
+text = "Game Paused"
+
+[node name="Button" type="Button" parent="PauseMenuScreen/Control/PauseMenu"]
+layout_mode = 2
+text = "Resume"
 
 [connection signal="level_selected" from="LevelSelect" to="LevelLoaderReloader" method="_on_level_select_level_selected"]
