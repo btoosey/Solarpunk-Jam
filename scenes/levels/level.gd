@@ -1,6 +1,7 @@
 extends Node2D
 
 
+@onready var pause_menu_screen: CanvasLayer = $"../../PauseMenuScreen"
 @onready var game_state_machine: GameStateMachine = $"../../GameStateMachine" as GameStateMachine
 @onready var characters: Node2D = $Characters
 @onready var collectibles: Node2D = $Collectibles
@@ -47,6 +48,7 @@ func log_level_state() -> void:
 
 
 func _on_level_completed() -> void:
+	pause_menu_screen.pausable = false
 	characters.stop_characters_moving()
 	$"../../LevelSelect".unlock_surrounding_levels()
 	$"../../LevelSelect".set_current_level_as_complete()

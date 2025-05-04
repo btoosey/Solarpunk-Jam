@@ -142,8 +142,14 @@ grow_vertical = 2
 layout_mode = 2
 text = "Game Paused"
 
-[node name="Button" type="Button" parent="PauseMenuScreen/Control/PauseMenu"]
+[node name="ResumeButton" type="Button" parent="PauseMenuScreen/Control/PauseMenu"]
 layout_mode = 2
 text = "Resume"
 
+[node name="LevelSelectButton" type="Button" parent="PauseMenuScreen/Control/PauseMenu"]
+layout_mode = 2
+text = "Level Select"
+
 [connection signal="level_selected" from="LevelSelect" to="LevelLoaderReloader" method="_on_level_select_level_selected"]
+[connection signal="pressed" from="PauseMenuScreen/Control/PauseMenu/ResumeButton" to="PauseMenuScreen" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenuScreen/Control/PauseMenu/LevelSelectButton" to="PauseMenuScreen" method="_on_level_select_button_pressed"]
