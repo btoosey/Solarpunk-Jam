@@ -131,15 +131,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -53.0
-offset_top = -29.0
-offset_right = 53.0
-offset_bottom = 29.0
+offset_left = -120.0
+offset_top = -109.0
+offset_right = 120.0
+offset_bottom = 109.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="PauseMenuScreen/Control/PauseMenu"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
 text = "Game Paused"
 
 [node name="ResumeButton" type="Button" parent="PauseMenuScreen/Control/PauseMenu"]
@@ -150,6 +153,55 @@ text = "Resume"
 layout_mode = 2
 text = "Level Select"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenuScreen/Control/PauseMenu"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Audio" type="HBoxContainer" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="AudioTitles" type="VBoxContainer" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio"]
+layout_mode = 2
+
+[node name="MasterVol" type="Label" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioTitles"]
+layout_mode = 2
+text = "Master"
+
+[node name="MusicVol" type="Label" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioTitles"]
+layout_mode = 2
+text = "Music
+"
+
+[node name="SFXVol" type="Label" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioTitles"]
+layout_mode = 2
+text = "Sound FX"
+
+[node name="AudioSliders" type="VBoxContainer" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 13
+
+[node name="MasterSlider" type="HSlider" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders"]
+layout_mode = 2
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="MusicSlider" type="HSlider" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders"]
+layout_mode = 2
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="SFXSlider" type="HSlider" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders"]
+layout_mode = 2
+max_value = 1.5
+step = 0.001
+value = 1.0
+
 [connection signal="level_selected" from="LevelSelect" to="LevelLoaderReloader" method="_on_level_select_level_selected"]
 [connection signal="pressed" from="PauseMenuScreen/Control/PauseMenu/ResumeButton" to="PauseMenuScreen" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenuScreen/Control/PauseMenu/LevelSelectButton" to="PauseMenuScreen" method="_on_level_select_button_pressed"]
+[connection signal="value_changed" from="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders/MasterSlider" to="PauseMenuScreen" method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders/MusicSlider" to="PauseMenuScreen" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders/SFXSlider" to="PauseMenuScreen" method="_on_sfx_slider_value_changed"]
