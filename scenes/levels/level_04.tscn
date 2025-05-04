@@ -131,7 +131,7 @@ tile_set = SubResource("TileSet_sw21o")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
-tile_map_data = PackedByteArray("AAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAgAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAgAAAAAAAMAAAAHAAQAAAAAAAMAAAAEAAYAAAAAAAMAAAALAAEAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAgAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAADAAEAAAAAAAMAAAACAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAALAAEAAAAAAAMAAAALAAIAAAAAAAMAAAABAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAACAAUAAAAAAAMAAAALAAMAAAAAAAMAAAALAAQAAAAAAAMAAAAGAAIAAAAAAAMAAAADAAUAAAAAAAMAAAAEAAUAAAAAAAMAAAAGAAUAAAAAAAMAAAAFAAUAAAAAAAMAAAAHAAUAAAAAAAMAAAAIAAUAAAAAAAMAAAAJAAUAAAAAAAMAAAAKAAUAAAAAAAMAAAALAAUAAAAAAAMAAAAEAAMAAAAAAAMAAAAIAAMAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
 
@@ -155,21 +155,35 @@ character_type = 1
 position = Vector2(80, 80)
 
 [node name="Hazard2" parent="Hazards" instance=ExtResource("7_c308d")]
-position = Vector2(144, 144)
+position = Vector2(80, 112)
+
+[node name="Hazard3" parent="Hazards" instance=ExtResource("7_c308d")]
+position = Vector2(80, 144)
+
+[node name="Hazard4" parent="Hazards" instance=ExtResource("7_c308d")]
+position = Vector2(336, 80)
+
+[node name="Hazard5" parent="Hazards" instance=ExtResource("7_c308d")]
+position = Vector2(336, 112)
+
+[node name="Hazard6" parent="Hazards" instance=ExtResource("7_c308d")]
+position = Vector2(336, 144)
+
+[node name="Hazard9" parent="Hazards" instance=ExtResource("7_c308d")]
+position = Vector2(144, 80)
+
+[node name="Hazard10" parent="Hazards" instance=ExtResource("7_c308d")]
+position = Vector2(272, 144)
 
 [node name="Collectibles" type="Node2D" parent="."]
 script = ExtResource("8_j72e5")
 
 [node name="Collectible" parent="Collectibles" instance=ExtResource("9_y83a0")]
-position = Vector2(80, 176)
+position = Vector2(112, 112)
 stats = ExtResource("10_irrfk")
 
 [node name="Collectible2" parent="Collectibles" instance=ExtResource("9_y83a0")]
-position = Vector2(176, 176)
-stats = ExtResource("11_2jyia")
-
-[node name="Collectible3" parent="Collectibles" instance=ExtResource("9_y83a0")]
-position = Vector2(272, 144)
+position = Vector2(304, 112)
 stats = ExtResource("11_2jyia")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
