@@ -1,16 +1,13 @@
-[gd_scene load_steps=16 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=13 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ea041"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_iqamp"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_4vcmf"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_wydeo"]
 [ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_dc267"]
-[ext_resource type="Resource" uid="uid://0avwthljtuj0" path="res://data/characters/character_02.tres" id="6_sokae"]
-[ext_resource type="PackedScene" uid="uid://d1u45op0b501d" path="res://scenes/hazards/hazard.tscn" id="7_m4ut3"]
 [ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_wk0vf"]
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_p3fsd"]
 [ext_resource type="Resource" uid="uid://b6uhb6w2487h" path="res://data/collectibles/collectible_01.tres" id="10_k4pyv"]
-[ext_resource type="Resource" uid="uid://co78ig44wucbq" path="res://data/collectibles/collectible_02.tres" id="11_7c8kl"]
 [ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="12_a4lxk"]
 
 [sub_resource type="TileSet" id="TileSet_sw21o"]
@@ -131,7 +128,7 @@ tile_set = SubResource("TileSet_sw21o")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
-tile_map_data = PackedByteArray("AAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAKAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAgAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAgAAAAAAAMAAAAHAAQAAAAAAAMAAAAEAAYAAAAAAAMAAAALAAEAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAgAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AAABAAEAAAAAAAMAAAACAAEAAAAAAAMAAAADAAEAAAAAAAMAAAAEAAEAAAAAAAMAAAAFAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAAFAAUAAAAAAAMAAAAFAAMAAAAAAAMAAAADAAUAAAAAAAMAAAAGAAEAAAAAAAMAAAAHAAEAAAAAAAMAAAAIAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAAJAAIAAAAAAAMAAAAJAAMAAAAAAAMAAAAJAAQAAAAAAAMAAAAJAAUAAAAAAAMAAAAIAAUAAAAAAAMAAAAHAAUAAAAAAAMAAAAGAAUAAAAAAAMAAAAEAAUAAAAAAAMAAAACAAUAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
 
@@ -143,37 +140,17 @@ z_index = 1
 position = Vector2(112, 112)
 stats = ExtResource("5_dc267")
 
-[node name="Character2" parent="Characters" instance=ExtResource("4_wydeo")]
-z_index = 1
-position = Vector2(176, 112)
-stats = ExtResource("6_sokae")
-character_type = 1
-
 [node name="Hazards" type="Node2D" parent="."]
-
-[node name="Hazard" parent="Hazards" instance=ExtResource("7_m4ut3")]
-position = Vector2(80, 80)
-
-[node name="Hazard2" parent="Hazards" instance=ExtResource("7_m4ut3")]
-position = Vector2(144, 80)
 
 [node name="Collectibles" type="Node2D" parent="."]
 script = ExtResource("8_wk0vf")
 
 [node name="Collectible" parent="Collectibles" instance=ExtResource("9_p3fsd")]
-position = Vector2(80, 176)
+position = Vector2(240, 112)
 stats = ExtResource("10_k4pyv")
 
-[node name="Collectible2" parent="Collectibles" instance=ExtResource("9_p3fsd")]
-position = Vector2(176, 176)
-stats = ExtResource("11_7c8kl")
-
-[node name="Collectible3" parent="Collectibles" instance=ExtResource("9_p3fsd")]
-position = Vector2(272, 144)
-stats = ExtResource("11_7c8kl")
-
 [node name="CharacterCamera" type="Camera2D" parent="."]
-position = Vector2(144, 112)
+position = Vector2(112, 112)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
