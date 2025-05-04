@@ -73,7 +73,7 @@ next_scene_path = "res://scenes/levels/level_03.tscn"
 next_level_left = NodePath("../LevelIcon2")
 next_level_right = NodePath("../LevelIcon4")
 
-[node name="LevelIcon4" parent="LevelSelect" node_paths=PackedStringArray("next_level_left") instance=ExtResource("5_0s6f8")]
+[node name="LevelIcon4" parent="LevelSelect" node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("5_0s6f8")]
 offset_left = 469.0
 offset_top = 204.0
 offset_right = 509.0
@@ -81,7 +81,18 @@ offset_bottom = 244.0
 level_name = "Level_04"
 level_name_shorthand = "04"
 next_scene_path = "res://scenes/levels/level_04.tscn"
+next_level_down = NodePath("../LevelIcon5")
 next_level_left = NodePath("../LevelIcon3")
+
+[node name="LevelIcon5" parent="LevelSelect" node_paths=PackedStringArray("next_level_up") instance=ExtResource("5_0s6f8")]
+offset_left = 469.0
+offset_top = 260.0
+offset_right = 509.0
+offset_bottom = 300.0
+level_name = "Level_04"
+level_name_shorthand = "05"
+next_scene_path = "res://scenes/levels/level_04.tscn"
+next_level_up = NodePath("../LevelIcon4")
 
 [node name="LevelIconHighlighter" type="TextureRect" parent="LevelSelect"]
 layout_mode = 0
