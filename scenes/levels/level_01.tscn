@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dopo3lvsqtwjy" path="res://assets/sprites/tilesheets/grass.png" id="2_q8y6u"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_4vcmf"]
 [ext_resource type="Texture2D" uid="uid://csp4jxyy5klco" path="res://assets/sprites/tilesheets/path.png" id="3_ch2md"]
-[ext_resource type="Texture2D" uid="uid://cx14uvcarpgnn" path="res://assets/sprites/tilesheets/tilesheet_v2.png" id="3_ewjwy"]
+[ext_resource type="Texture2D" uid="uid://cx14uvcarpgnn" path="res://assets/sprites/tilesheets/walls.png" id="3_ewjwy"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_wydeo"]
 [ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_dc267"]
 [ext_resource type="Texture2D" uid="uid://cghkxwy5rf60y" path="res://assets/sprites/environment/particle_01.png" id="5_q15es"]
