@@ -1,12 +1,14 @@
-[gd_scene load_steps=17 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=24 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ea041"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_iqamp"]
 [ext_resource type="Texture2D" uid="uid://dopo3lvsqtwjy" path="res://assets/sprites/tilesheets/grass.png" id="2_q8y6u"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_4vcmf"]
+[ext_resource type="Texture2D" uid="uid://csp4jxyy5klco" path="res://assets/sprites/tilesheets/path.png" id="3_ch2md"]
 [ext_resource type="Texture2D" uid="uid://cx14uvcarpgnn" path="res://assets/sprites/tilesheets/tilesheet_v2.png" id="3_ewjwy"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_wydeo"]
 [ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_dc267"]
+[ext_resource type="Texture2D" uid="uid://cghkxwy5rf60y" path="res://assets/sprites/environment/particle_01.png" id="5_q15es"]
 [ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_wk0vf"]
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_p3fsd"]
 [ext_resource type="Resource" uid="uid://b6uhb6w2487h" path="res://data/collectibles/collectible_01.tres" id="10_k4pyv"]
@@ -35,6 +37,97 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_sw21o"]
 tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_0o5oa")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5jkmy"]
+texture = ExtResource("3_ch2md")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/left_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/top_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/right_side = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/left_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/top_side = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/top_side = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/right_side = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/left_side = 0
+3:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/right_side = 0
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/terrains_peering_bit/left_side = 0
+
+[sub_resource type="TileSet" id="TileSet_0jtfd"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Path"
+terrain_set_0/terrain_0/color = Color(0.080029, 0.405403, 0.617443, 1)
+sources/0 = SubResource("TileSetAtlasSource_5jkmy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na3fn"]
 texture = ExtResource("2_iqamp")
@@ -573,6 +666,27 @@ custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_na3fn")
 sources/1 = SubResource("TileSetAtlasSource_oiqf6")
 
+[sub_resource type="Curve" id="Curve_kd62d"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.324786, 1), 0.0, 0.0, 0, 0, Vector2(0.696581, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_xkstc"]
+curve = SubResource("Curve_kd62d")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4orw6"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 240, 1)
+spread = 180.0
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+angular_velocity_min = 20.0
+angular_velocity_max = 40.0
+gravity = Vector3(0, 2, 0)
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_xkstc")
+color = Color(1, 1, 1, 0.572549)
+
 [node name="Level_01" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_ea041")
@@ -585,12 +699,27 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAI
 tile_set = SubResource("TileSet_sw21o")
 metadata/_edit_lock_ = true
 
+[node name="Paths" type="TileMapLayer" parent="Tilemaps"]
+tile_map_data = PackedByteArray("AAADAAMAAAACAAMAAAAEAAMAAAADAAEAAAAEAAIAAAABAAAAAAAFAAIAAAACAAMAAAAGAAIAAAACAAMAAAAHAAIAAAADAAAAAAAHAAMAAAABAAEAAAAHAAQAAAADAAIAAAAGAAQAAAACAAMAAAAFAAQAAAACAAMAAAAEAAQAAAABAAIAAAACAAMAAAABAAMAAAAIAAMAAAADAAMAAAA=")
+tile_set = SubResource("TileSet_0jtfd")
+metadata/_edit_lock_ = true
+
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
 z_index = 1
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAABAAEAAQABAAAAAAACAAEAAQACAAMAAAADAAEAAQACAAMAAAAEAAEAAQACAAMAAAAFAAEAAQACAAMAAAAFAAUAAQACAAMAAAAFAAMAAQAAAAMAAAADAAUAAQACAAMAAAAGAAEAAQACAAMAAAAHAAEAAQACAAMAAAAIAAEAAQACAAMAAAAJAAEAAQADAAAAAAAJAAIAAQAAAAEAAAAJAAMAAQAAAAEAAAAJAAQAAQAAAAEAAAAJAAUAAQADAAIAAAAIAAUAAQACAAMAAAAHAAUAAQACAAMAAAAGAAUAAQACAAMAAAAEAAUAAQACAAMAAAABAAIAAQAAAAEAAAABAAMAAQAAAAEAAAABAAQAAQAAAAEAAAABAAUAAQABAAIAAAACAAUAAQACAAMAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Visuals"]
+z_index = 99
+position = Vector2(176, 112)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_4orw6")
+texture = ExtResource("5_q15es")
+lifetime = 8.0
 
 [node name="Characters" type="Node2D" parent="."]
 y_sort_enabled = true
