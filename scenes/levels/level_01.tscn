@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=28 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ea041"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_iqamp"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://csp4jxyy5klco" path="res://assets/sprites/tilesheets/path.png" id="3_ch2md"]
 [ext_resource type="Texture2D" uid="uid://cx14uvcarpgnn" path="res://assets/sprites/tilesheets/walls.png" id="3_ewjwy"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_wydeo"]
-[ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_dc267"]
 [ext_resource type="Texture2D" uid="uid://cghkxwy5rf60y" path="res://assets/sprites/environment/particle_01.png" id="5_q15es"]
 [ext_resource type="Texture2D" uid="uid://j2xiyjm1n18k" path="res://assets/sprites/tilesheets/fence.png" id="6_a2ep4"]
 [ext_resource type="Texture2D" uid="uid://ciq3ecyuhjwd5" path="res://assets/sprites/tilesheets/wild_grass.png" id="7_54p2o"]
@@ -1005,7 +1004,7 @@ metadata/_edit_lock_ = true
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
 z_index = 1
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAAEAAQABAAMAAAAFAAUAAQACAAMAAAAFAAMAAQAAAAMAAAADAAUAAQACAAMAAAAGAAEAAQACAAMAAAAHAAEAAQACAAMAAAAIAAEAAQACAAMAAAAJAAEAAQADAAMAAAAHAAUAAQACAAMAAAAGAAUAAQACAAMAAAAEAAUAAQACAAMAAAABAAUAAQABAAIAAAACAAUAAQACAAMAAAABAAQAAQAAAAAAAAAJAAIAAwAAAAAAAAABAAMAAwAAAAIAAAABAAIAAwAAAAEAAAABAAEAAwABAAAAAAACAAEAAwACAAMAAAADAAEAAwACAAMAAAAEAAEAAwADAAMAAAAIAAUAAQACAAMAAAAJAAUAAQADAAMAAAAJAAQAAwAAAAIAAAAJAAMAAwAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAAFAAEAAQABAAMAAAAFAAUAAQACAAMAAAAFAAMAAQAAAAMAAAADAAUAAQACAAMAAAAGAAEAAQACAAMAAAAHAAEAAQACAAMAAAAIAAEAAQACAAMAAAAJAAEAAQADAAMAAAAHAAUAAQACAAMAAAAGAAUAAQACAAMAAAAEAAUAAQACAAMAAAABAAUAAQABAAIAAAACAAUAAQACAAMAAAABAAQAAQAAAAAAAAAJAAIAAwAAAAAAAAABAAIAAwAAAAEAAAABAAEAAwABAAAAAAACAAEAAwACAAMAAAADAAEAAwACAAMAAAAEAAEAAwADAAMAAAAIAAUAAQACAAMAAAAJAAUAAQADAAMAAAAJAAQAAwAAAAIAAAAJAAMAAwAAAAEAAAABAAMAAwAAAAIAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
 
@@ -1035,7 +1034,6 @@ script = ExtResource("3_4vcmf")
 z_index = 1
 y_sort_enabled = true
 position = Vector2(112, 112)
-stats = ExtResource("5_dc267")
 
 [node name="Hazards" type="Node2D" parent="."]
 

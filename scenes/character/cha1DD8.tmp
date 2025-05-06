@@ -1,16 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b17qw8h3p56hn"]
+[gd_scene load_steps=6 format=3 uid="uid://b17qw8h3p56hn"]
 
 [ext_resource type="Script" path="res://scenes/character/scripts/character.gd" id="1_41qnt"]
 [ext_resource type="Script" path="res://scenes/character/components/grid_mover.gd" id="2_k5lh0"]
-[ext_resource type="Shader" path="res://shaders/character_outline.gdshader" id="2_skjst"]
-[ext_resource type="Texture2D" uid="uid://bey6wk1g2c530" path="res://assets/sprites/characters/characters.png" id="2_tyj6d"]
+[ext_resource type="Texture2D" uid="uid://bey6wk1g2c530" path="res://assets/sprites/characters/character_base.png" id="2_tyj6d"]
 [ext_resource type="Script" path="res://scenes/character/components/hazard_detector.gd" id="3_i6sdv"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fbo0t"]
-resource_local_to_scene = true
-shader = ExtResource("2_skjst")
-shader_parameter/line_colour = Color(0.282353, 0.819608, 0.8, 1)
-shader_parameter/line_thickness = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvcae"]
 size = Vector2(12, 12)
@@ -22,10 +15,7 @@ script = ExtResource("1_41qnt")
 grid_mover = NodePath("GridMover")
 hazard_detector = NodePath("HazardDetector")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
-material = SubResource("ShaderMaterial_fbo0t")
-
-[node name="CharacterSprite" type="Sprite2D" parent="CanvasGroup"]
+[node name="CharacterSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_tyj6d")
 offset = Vector2(0, -8)
 region_enabled = true

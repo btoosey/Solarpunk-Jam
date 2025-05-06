@@ -44,6 +44,16 @@ func move(direction: Vector2i) -> void:
 				return
 
 
+	if direction == Vector2i(1, 0):
+		get_parent().character_sprite.region_rect.position = (Vector2(0, get_parent().character_type) * Main.CHARACTER_SIZE) + (get_parent().facing_directions.RIGHT * Main.CHARACTER_SIZE)
+	elif direction == Vector2i(0, 1):
+		get_parent().character_sprite.region_rect.position = (Vector2(0, get_parent().character_type) * Main.CHARACTER_SIZE) + (get_parent().facing_directions.UP * Main.CHARACTER_SIZE)
+	elif direction == Vector2i(0, -1):
+		get_parent().character_sprite.region_rect.position = (Vector2(0, get_parent().character_type) * Main.CHARACTER_SIZE) + (get_parent().facing_directions.DOWN * Main.CHARACTER_SIZE)
+	elif direction == Vector2i(-1, 0):
+		get_parent().character_sprite.region_rect.position = (Vector2(0, get_parent().character_type) * Main.CHARACTER_SIZE) + (get_parent().facing_directions.LEFT * Main.CHARACTER_SIZE)
+
+
 	is_moving = true
 	get_parent().global_position = ground.map_to_local(target_tile)
 	get_parent().character_sprite.global_position = ground.map_to_local(current_tile)

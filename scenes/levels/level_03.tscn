@@ -1,11 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://c6ko5lvsnn1ja"]
+[gd_scene load_steps=14 format=4 uid="uid://c6ko5lvsnn1ja"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_spr78"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_bm14x"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_lb705"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_vcu4g"]
-[ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_3102u"]
-[ext_resource type="Resource" uid="uid://0avwthljtuj0" path="res://data/characters/character_02.tres" id="6_1b13l"]
 [ext_resource type="PackedScene" uid="uid://d1u45op0b501d" path="res://scenes/hazards/hazard.tscn" id="7_fwx8k"]
 [ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_g60uo"]
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_m5hun"]
@@ -141,12 +139,10 @@ script = ExtResource("3_lb705")
 [node name="Character" parent="Characters" instance=ExtResource("4_vcu4g")]
 z_index = 1
 position = Vector2(240, 112)
-stats = ExtResource("5_3102u")
 
 [node name="Character2" parent="Characters" instance=ExtResource("4_vcu4g")]
 z_index = 1
 position = Vector2(368, 112)
-stats = ExtResource("6_1b13l")
 character_type = 1
 
 [node name="Hazards" type="Node2D" parent="."]

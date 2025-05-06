@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterStats" load_steps=3 format=3 uid="uid://0avwthljtuj0"]
-
-[ext_resource type="Texture2D" uid="uid://qkvnl3yfp3wq" path="res://assets/sprites/characters/character02_v1.png" id="1_3xbl1"]
-[ext_resource type="Script" path="res://data/characters/character_data.gd" id="2_dnynh"]
-
-[resource]
-script = ExtResource("2_dnynh")
-character_skin = ExtResource("1_3xbl1")
