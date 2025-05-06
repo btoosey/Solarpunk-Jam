@@ -1026,6 +1026,9 @@ process_material = SubResource("ParticleProcessMaterial_4orw6")
 texture = ExtResource("5_q15es")
 lifetime = 8.0
 
+[node name="CanvasModulate" type="CanvasModulate" parent="Visuals"]
+color = Color(0.953688, 0.949241, 0.914448, 1)
+
 [node name="Characters" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("3_4vcmf")
