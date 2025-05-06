@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://d4elni2yporhi"]
+[gd_scene load_steps=13 format=4 uid="uid://d4elni2yporhi"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_bjue2"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_f3vv0"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_52t4v"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_1g0ae"]
-[ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_ih2xh"]
 [ext_resource type="PackedScene" uid="uid://d1u45op0b501d" path="res://scenes/hazards/hazard.tscn" id="7_vi77a"]
 [ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_2fc1d"]
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_tvve4"]
@@ -139,7 +138,6 @@ script = ExtResource("3_52t4v")
 [node name="Character" parent="Characters" instance=ExtResource("4_1g0ae")]
 z_index = 1
 position = Vector2(240, 112)
-stats = ExtResource("5_ih2xh")
 
 [node name="Hazards" type="Node2D" parent="."]
 
