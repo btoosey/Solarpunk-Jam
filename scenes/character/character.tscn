@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/character/scripts/character.gd" id="1_41qnt"]
 [ext_resource type="Script" path="res://scenes/character/components/grid_mover.gd" id="2_k5lh0"]
-[ext_resource type="Texture2D" uid="uid://bey6wk1g2c530" path="res://assets/sprites/characters/character_base.png" id="2_tyj6d"]
+[ext_resource type="Texture2D" uid="uid://bey6wk1g2c530" path="res://assets/sprites/characters/characters.png" id="2_tyj6d"]
 [ext_resource type="Script" path="res://scenes/character/components/hazard_detector.gd" id="3_i6sdv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvcae"]
