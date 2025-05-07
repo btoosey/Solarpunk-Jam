@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://4la4qunjwgq2"]
+[gd_scene load_steps=4 format=3 uid="uid://4la4qunjwgq2"]
 
 [ext_resource type="Script" path="res://scenes/collectibles/collectible.gd" id="1_0ao6s"]
+[ext_resource type="Script" path="res://scenes/collectibles/hovering_visuals_component.gd" id="2_4ylf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d872"]
 
@@ -12,6 +13,11 @@ script = ExtResource("1_0ao6s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0d872")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="HoveringVisualsComponent" type="Node2D" parent="."]
+script = ExtResource("2_4ylf2")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

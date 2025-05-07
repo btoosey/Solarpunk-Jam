@@ -18,7 +18,7 @@ var facing_directions := {
 	"LEFT": Vector2(3, 0)
 }
 
-var character_colours := [Color.MEDIUM_TURQUOISE, Color.GOLD, Color.CORAL]
+var character_colours := [Color.html("#81dfff"), Color.html("#fae05c"), Color.html("#f77974")]
 
 
 func _ready() -> void:
