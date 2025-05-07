@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=31 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ea041"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_iqamp"]
@@ -16,9 +16,7 @@
 [ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="12_a4lxk"]
 [ext_resource type="PackedScene" uid="uid://dow0k4o17yhgn" path="res://scenes/milestones/milestone.tscn" id="14_kxww3"]
 [ext_resource type="Texture2D" uid="uid://bdkygk0mev3p8" path="res://assets/sprites/milestones/3_kite_0.png" id="15_6oive"]
-[ext_resource type="Texture2D" uid="uid://cwow72oodvkiu" path="res://assets/sprites/milestones/2_solar_panel_0.png" id="15_08nby"]
 [ext_resource type="Texture2D" uid="uid://cttpsgoigj0fa" path="res://assets/sprites/milestones/3_kite_1.png" id="16_bwhwd"]
-[ext_resource type="Texture2D" uid="uid://x4b4cmlgeg3s" path="res://assets/sprites/milestones/2_solar_panel_1.png" id="16_jtees"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o5oa"]
 texture = ExtResource("2_q8y6u")
@@ -1058,11 +1056,6 @@ stats = ExtResource("10_k4pyv")
 position = Vector2(368, -28)
 incomplete_sprite_texture = ExtResource("15_6oive")
 complete_sprite_texture = ExtResource("16_bwhwd")
-
-[node name="Milestone2" parent="Milestones" instance=ExtResource("14_kxww3")]
-position = Vector2(406, 151)
-incomplete_sprite_texture = ExtResource("15_08nby")
-complete_sprite_texture = ExtResource("16_jtees")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
 position = Vector2(112, 112)
