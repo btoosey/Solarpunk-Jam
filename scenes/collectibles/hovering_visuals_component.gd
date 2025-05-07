@@ -12,7 +12,7 @@ func _ready() -> void:
 	hover_pos = starting_pos + Vector2(0, -4)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if visuals.global_position == starting_pos:
 		var move_tween = get_tree().create_tween()
 		move_tween.tween_property(visuals, "global_position", hover_pos, 2).set_trans(Tween.TRANS_SINE)
