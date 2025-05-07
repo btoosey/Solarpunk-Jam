@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dow0k4o17yhgn"]
+
+[ext_resource type="Script" path="res://scenes/milestones/milestone.gd" id="1_1wh7v"]
+
+[sub_resource type="Gradient" id="Gradient_275dg"]
+offsets = PackedFloat32Array(0, 0.289916, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.140447, 0.140447, 0.140447, 1, 0.140447, 0.140447, 0.140447, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3yb3m"]
+gradient = SubResource("Gradient_275dg")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yjesn"]
+polygon = PackedVector2Array(-42, -114, -42, -75, -9, -7, -2, -1, 48, -73, 48, -116)
+
+[node name="Milestone" type="Node2D"]
+script = ExtResource("1_1wh7v")
+
+[node name="IncompleteSprite" type="Sprite2D" parent="."]
+
+[node name="CompleteSprite" type="Sprite2D" parent="."]
+visible = false
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-33.17, -40.3493)
+rotation = -0.935582
+scale = Vector2(1.65491, 1.42605)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_3yb3m")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_yjesn")
