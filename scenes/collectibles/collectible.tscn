@@ -1,8 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://4la4qunjwgq2"]
+[gd_scene load_steps=6 format=3 uid="uid://4la4qunjwgq2"]
 
 [ext_resource type="Script" path="res://scenes/collectibles/collectible.gd" id="1_0ao6s"]
+[ext_resource type="Script" path="res://scenes/collectibles/hovering_visuals_component.gd" id="2_4ylf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d872"]
+
+[sub_resource type="Gradient" id="Gradient_vma74"]
+offsets = PackedFloat32Array(0.012605, 0.983193)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vpbg3"]
+gradient = SubResource("Gradient_vma74")
+width = 40
+height = 40
+fill = 1
+fill_from = Vector2(0.491453, 0.504274)
+fill_to = Vector2(0.730769, 0.0512821)
 
 [node name="Collectible" type="Area2D" groups=["collectibles"]]
 collision_layer = 8
@@ -12,6 +25,15 @@ script = ExtResource("1_0ao6s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0d872")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="HoveringVisualsComponent" type="Node2D" parent="."]
+script = ExtResource("2_4ylf2")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+
+[node name="PointLight2D" type="PointLight2D" parent="Visuals"]
+color = Color(0.370364, 0.370364, 0.370364, 1)
+texture = SubResource("GradientTexture2D_vpbg3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,7 +7,7 @@ signal collectible_reset
 
 @export var stats: CollectibleStats : set = set_stats
 
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var sprite_2d: Sprite2D = $Visuals/Sprite2D
 
 var collected := false
 var turn_collected: int
