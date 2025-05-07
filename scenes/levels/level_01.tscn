@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://dnrjt6uxyocov"]
+[gd_scene load_steps=29 format=4 uid="uid://dnrjt6uxyocov"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ea041"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_iqamp"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_p3fsd"]
 [ext_resource type="Resource" uid="uid://b6uhb6w2487h" path="res://data/collectibles/collectible_01.tres" id="10_k4pyv"]
 [ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="12_a4lxk"]
+[ext_resource type="PackedScene" uid="uid://dow0k4o17yhgn" path="res://scenes/milestones/milestone.tscn" id="14_kxww3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o5oa"]
 texture = ExtResource("2_q8y6u")
@@ -1046,6 +1047,10 @@ script = ExtResource("8_wk0vf")
 [node name="Collectible" parent="Collectibles" instance=ExtResource("9_p3fsd")]
 position = Vector2(240, 112)
 stats = ExtResource("10_k4pyv")
+
+[node name="Milestones" type="Node2D" parent="."]
+
+[node name="Milestone" parent="Milestones" instance=ExtResource("14_kxww3")]
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
 position = Vector2(112, 112)
