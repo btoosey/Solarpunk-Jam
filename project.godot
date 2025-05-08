@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GlobalControls="*res://scripts/globals/global_controls.gd"
 LevelsData="*res://scripts/globals/levels_data.gd"
 MusicPlayer="*res://scenes/audio_players/music_player.tscn"
 SFXPlayer="*res://scenes/audio_players/sfx_player.tscn"
@@ -41,6 +42,8 @@ variables={}
 
 window/size/viewport_width=1440
 window/size/viewport_height=810
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
@@ -89,6 +92,11 @@ dialogic_default_action={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+toggle_fullscreen={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
 ]
 }
 
