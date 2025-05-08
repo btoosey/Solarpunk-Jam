@@ -17,6 +17,8 @@ func _ready() -> void:
 	collectibles.all_collectibles_collected.connect(_on_level_completed)
 	log_level_state()
 	if DialogicResourceUtil.get_timeline_resource("%s" % name) != null:
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+
 		start_level_dialogue()
 	else:
 		allow_movement()
@@ -61,9 +63,20 @@ func _on_level_completed() -> void:
 
 
 func start_level_dialogue() -> void:
-	Dialogic.signal_event.connect(_on_dialogic_signal)
 	var layout = Dialogic.Styles.load_style("speech_bubble_style")
-	layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0).speech_marker)
+	if characters.get_children().size() >= 3:
+		layout.register_character(load("res://dialogic_styles_characters/steve.dch"), characters.get_child(2))
+		layout.register_character(load("res://dialogic_styles_characters/jenny.dch"), characters.get_child(1))
+		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0))
+
+
+	elif characters.get_children().size() >= 2:
+		layout.register_character(load("res://dialogic_styles_characters/jenny.dch"), characters.get_child(1))
+		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0))
+
+	elif characters.get_children().size() >= 1:
+		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0))
+
 	Dialogic.start("%s" % name)
 
 

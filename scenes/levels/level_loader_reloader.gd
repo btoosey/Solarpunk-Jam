@@ -31,4 +31,6 @@ func _on_reload_level() -> void:
 
 func clear_current_level() -> void:
 	if level.get_child_count() > 0:
-		level.remove_child(level.get_child(0))
+		var lv = level.get_child(0)
+		level.remove_child(lv)
+		lv.queue_free()

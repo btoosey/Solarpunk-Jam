@@ -1,0 +1,5 @@
+[wait time="1.0"]
+bradley: Hi Jenny!
+jenny: Hiya!
+[signal arg="move"]
+[end_timeline]

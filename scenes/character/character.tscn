@@ -42,4 +42,3 @@ script = ExtResource("3_i6sdv")
 shape = SubResource("RectangleShape2D_jvcae")
 
 [node name="SpeechMarker" type="Marker2D" parent="."]
-position = Vector2(14, -19)
