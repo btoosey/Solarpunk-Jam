@@ -8,7 +8,7 @@ extends Node2D
 @onready var walls: TileMapLayer = $"../../../Tilemaps/Walls"
 
 var is_moving := false
-var can_move := true
+var can_move := false
 
 
 func _physics_process(_delta: float) -> void:

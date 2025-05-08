@@ -8,6 +8,7 @@ class_name Character
 @export var character_type: int
 
 @onready var character_sprite: Sprite2D = $CanvasGroup/CharacterSprite
+@onready var speech_marker: Marker2D = $SpeechMarker
 
 var can_interact := true
 
