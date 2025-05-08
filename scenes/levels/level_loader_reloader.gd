@@ -18,6 +18,7 @@ func _on_level_select_level_selected(path: Variant) -> void:
 	level_scene = load(path) as PackedScene
 	instantiate_level()
 	game_state_machine._on_transition_requested(game_state_machine.current_state, GameState.State.PLAY)
+	LevelsData.is_in_session = true
 
 
 func reload_level() -> void:
@@ -31,4 +32,6 @@ func _on_reload_level() -> void:
 
 func clear_current_level() -> void:
 	if level.get_child_count() > 0:
-		level.remove_child(level.get_child(0))
+		var lv = level.get_child(0)
+		level.remove_child(lv)
+		lv.queue_free()

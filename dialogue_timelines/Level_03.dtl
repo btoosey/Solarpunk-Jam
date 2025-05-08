@@ -1,0 +1,5 @@
+[wait time="1.0"]
+tikara: Hi Bradley!
+bradley: Hi!
+[signal arg="move"]
+[end_timeline]

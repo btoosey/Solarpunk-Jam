@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CollectibleStats" load_steps=3 format=3 uid="uid://co78ig44wucbq"]
 
-[ext_resource type="Texture2D" uid="uid://ia6xy4w4hmpq" path="res://assets/sprites/collectibles/collectible_02_v1.png" id="1_lqh4f"]
+[ext_resource type="Texture2D" uid="uid://gqmpqt8cqpi6" path="res://assets/sprites/collectibles/collectible_02_v1.png" id="1_lqh4f"]
 [ext_resource type="Script" path="res://data/collectibles/collectible_data.gd" id="2_vijat"]
 
 [resource]

@@ -1,11 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://brl1mb5t440sx"]
+[gd_scene load_steps=14 format=4 uid="uid://brl1mb5t440sx"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_oma4w"]
 [ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_wneno"]
 [ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_vx4cv"]
 [ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_2ro3s"]
-[ext_resource type="Resource" uid="uid://bbgyn3a231hbg" path="res://data/characters/character_01.tres" id="5_82068"]
-[ext_resource type="Resource" uid="uid://0avwthljtuj0" path="res://data/characters/character_02.tres" id="6_du7cv"]
 [ext_resource type="PackedScene" uid="uid://d1u45op0b501d" path="res://scenes/hazards/hazard.tscn" id="7_c308d"]
 [ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_j72e5"]
 [ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_y83a0"]
@@ -121,7 +119,7 @@ custom_data_layer_0/name = "wall_obstacle"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_na3fn")
 
-[node name="Level_01" type="Node2D"]
+[node name="Level_04" type="Node2D"]
 script = ExtResource("1_oma4w")
 
 [node name="Tilemaps" type="Node2D" parent="."]
@@ -141,12 +139,10 @@ script = ExtResource("3_vx4cv")
 [node name="Character" parent="Characters" instance=ExtResource("4_2ro3s")]
 z_index = 1
 position = Vector2(240, 112)
-stats = ExtResource("5_82068")
 
 [node name="Character2" parent="Characters" instance=ExtResource("4_2ro3s")]
 z_index = 1
 position = Vector2(176, 112)
-stats = ExtResource("6_du7cv")
 character_type = 1
 
 [node name="Hazards" type="Node2D" parent="."]

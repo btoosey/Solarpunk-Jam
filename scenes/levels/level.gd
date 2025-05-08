@@ -16,6 +16,12 @@ func _ready() -> void:
 	characters.characters_moved.connect(log_level_state)
 	collectibles.all_collectibles_collected.connect(_on_level_completed)
 	log_level_state()
+	if DialogicResourceUtil.get_timeline_resource("%s" % name) != null and not LevelsData.is_in_session:
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+
+		start_level_dialogue()
+	else:
+		allow_movement()
 
 
 func _on_undo() -> void:
@@ -54,3 +60,29 @@ func _on_level_completed() -> void:
 	$"../../LevelSelect".set_current_level_as_complete()
 	await get_tree().create_timer(1).timeout
 	game_state_machine._on_transition_requested(game_state_machine.current_state, GameState.State.LEVEL_SELECT)
+	LevelsData.is_in_session = false
+
+
+func start_level_dialogue() -> void:
+	var layout = Dialogic.Styles.load_style("speech_bubble_style")
+
+	if characters.get_children().size() >= 3:
+		layout.register_character(load("res://dialogic_styles_characters/elim.dch"), characters.get_child(2).speech_marker)
+
+	if characters.get_children().size() >= 2:
+		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(1).speech_marker)
+
+	if characters.get_children().size() >= 1:
+		layout.register_character(load("res://dialogic_styles_characters/tikara.dch"), characters.get_child(0).speech_marker)
+
+	Dialogic.start("%s" % name)
+
+
+func _on_dialogic_signal(arg: String) -> void:
+	if arg == "move":
+		allow_movement()
+
+
+func allow_movement() -> void:
+	for c in characters.get_children():
+		c.grid_mover.can_move = true	
