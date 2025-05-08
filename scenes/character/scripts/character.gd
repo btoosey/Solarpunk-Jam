@@ -9,6 +9,7 @@ class_name Character
 
 @onready var character_sprite: Sprite2D = $CanvasGroup/CharacterSprite
 @onready var speech_marker: Node2D = $SpeechMarker
+@onready var butterfly_anim: AnimatedSprite2D = $ButterflyAnim
 
 var can_interact := true
 
