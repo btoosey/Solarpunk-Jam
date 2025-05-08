@@ -25,6 +25,7 @@ overrides = {
 "box_padding": "Vector2(16, 10)",
 "box_wobble_amount": "0.2",
 "box_wobble_speed": "0.6",
+"name_label_box_modulate_use_character_color": "true",
 "name_label_enabled": "false"
 }
 

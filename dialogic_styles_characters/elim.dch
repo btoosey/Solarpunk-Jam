@@ -6,11 +6,11 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "speech_bubble_style"
+"style": ""
 },
 "default_portrait": "",
 "description": "",
-"display_name": "jenny",
+"display_name": "Elim",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),

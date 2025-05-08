@@ -65,18 +65,15 @@ func _on_level_completed() -> void:
 
 func start_level_dialogue() -> void:
 	var layout = Dialogic.Styles.load_style("speech_bubble_style")
+
 	if characters.get_children().size() >= 3:
-		layout.register_character(load("res://dialogic_styles_characters/steve.dch"), characters.get_child(2))
-		layout.register_character(load("res://dialogic_styles_characters/jenny.dch"), characters.get_child(1))
-		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0))
+		layout.register_character(load("res://dialogic_styles_characters/elim.dch"), characters.get_child(2).speech_marker)
 
+	if characters.get_children().size() >= 2:
+		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(1).speech_marker)
 
-	elif characters.get_children().size() >= 2:
-		layout.register_character(load("res://dialogic_styles_characters/jenny.dch"), characters.get_child(1))
-		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0))
-
-	elif characters.get_children().size() >= 1:
-		layout.register_character(load("res://dialogic_styles_characters/bradley.dch"), characters.get_child(0))
+	if characters.get_children().size() >= 1:
+		layout.register_character(load("res://dialogic_styles_characters/tikara.dch"), characters.get_child(0).speech_marker)
 
 	Dialogic.start("%s" % name)
 

@@ -166,10 +166,12 @@ stats = ExtResource("10_dgcnf")
 
 [node name="Collectible3" parent="Collectibles" instance=ExtResource("9_m5hun")]
 position = Vector2(400, 48)
+priority = 1
 stats = ExtResource("11_ko264")
 
 [node name="Collectible4" parent="Collectibles" instance=ExtResource("9_m5hun")]
 position = Vector2(432, 144)
+priority = 1
 stats = ExtResource("11_ko264")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]

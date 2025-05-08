@@ -26,7 +26,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "bradley": "res://dialogic_styles_characters/bradley.dch",
-"jenny": "res://dialogic_styles_characters/jenny.dch"
+"elim": "res://dialogic_styles_characters/elim.dch",
+"tikara": "res://dialogic_styles_characters/tikara.dch"
 }
 directories/dtl_directory={
 "Level_01": "res://dialogue_timelines/Level_01.dtl",
