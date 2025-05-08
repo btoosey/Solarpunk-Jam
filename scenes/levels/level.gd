@@ -16,7 +16,7 @@ func _ready() -> void:
 	characters.characters_moved.connect(log_level_state)
 	collectibles.all_collectibles_collected.connect(_on_level_completed)
 	log_level_state()
-	if DialogicResourceUtil.get_timeline_resource("%s" % name) != null:
+	if DialogicResourceUtil.get_timeline_resource("%s" % name) != null and not LevelsData.is_in_session:
 		Dialogic.signal_event.connect(_on_dialogic_signal)
 
 		start_level_dialogue()
@@ -60,6 +60,7 @@ func _on_level_completed() -> void:
 	$"../../LevelSelect".set_current_level_as_complete()
 	await get_tree().create_timer(1).timeout
 	game_state_machine._on_transition_requested(game_state_machine.current_state, GameState.State.LEVEL_SELECT)
+	LevelsData.is_in_session = false
 
 
 func start_level_dialogue() -> void:

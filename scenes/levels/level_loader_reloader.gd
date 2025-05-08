@@ -18,6 +18,7 @@ func _on_level_select_level_selected(path: Variant) -> void:
 	level_scene = load(path) as PackedScene
 	instantiate_level()
 	game_state_machine._on_transition_requested(game_state_machine.current_state, GameState.State.PLAY)
+	LevelsData.is_in_session = true
 
 
 func reload_level() -> void:
