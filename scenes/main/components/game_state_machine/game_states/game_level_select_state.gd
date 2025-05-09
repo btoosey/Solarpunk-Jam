@@ -10,6 +10,7 @@ func enter() -> void:
 	scene_transition.fade_out()
 	level_select.show()
 	level_select.enabled = true
+	LevelsData.is_in_session = false
 
 
 func exit() -> void:
