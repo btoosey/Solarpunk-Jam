@@ -35,7 +35,8 @@ directories/dtl_directory={
 "Level_02": "res://dialogue_timelines/Level_02.dtl",
 "Level_03": "res://dialogue_timelines/Level_03.dtl",
 "Level_04": "res://dialogue_timelines/Level_04.dtl",
-"Level_05": "res://dialogue_timelines/Level_05.dtl"
+"Level_05": "res://dialogue_timelines/Level_05.dtl",
+"Level_06": "res://dialogue_timelines/Level_06.dtl"
 }
 layout/style_list=["res://dialogic_styles_characters/speech_bubble_style.tres"]
 layout/default_style="res://dialogic_styles_characters/speech_bubble_style.tres"
