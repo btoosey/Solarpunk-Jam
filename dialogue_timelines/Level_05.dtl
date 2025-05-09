@@ -1,0 +1,6 @@
+[wait time="3.0"]
+tikara: I'm going to make a few more raised beds.
+bradley: Okay great, I'll get started on some solar panels to power the irrigation system!
+tikara: Perfect, let's go!
+[signal arg="move"]
+[end_timeline]
