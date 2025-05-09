@@ -1,25 +1,25 @@
 [gd_scene load_steps=31 format=4 uid="uid://dnrjt6uxyocov"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ea041"]
-[ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="2_iqamp"]
-[ext_resource type="Texture2D" uid="uid://dopo3lvsqtwjy" path="res://assets/sprites/tilesheets/grass.png" id="2_q8y6u"]
-[ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="3_4vcmf"]
-[ext_resource type="Texture2D" uid="uid://csp4jxyy5klco" path="res://assets/sprites/tilesheets/path.png" id="3_ch2md"]
-[ext_resource type="Texture2D" uid="uid://cx14uvcarpgnn" path="res://assets/sprites/tilesheets/walls.png" id="3_ewjwy"]
-[ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="4_wydeo"]
-[ext_resource type="Texture2D" uid="uid://cghkxwy5rf60y" path="res://assets/sprites/environment/particle_01.png" id="5_q15es"]
-[ext_resource type="Texture2D" uid="uid://j2xiyjm1n18k" path="res://assets/sprites/tilesheets/fence.png" id="6_a2ep4"]
-[ext_resource type="Texture2D" uid="uid://ciq3ecyuhjwd5" path="res://assets/sprites/tilesheets/wild_grass.png" id="7_54p2o"]
-[ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="8_wk0vf"]
-[ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="9_p3fsd"]
-[ext_resource type="Resource" uid="uid://b6uhb6w2487h" path="res://data/collectibles/collectible_01.tres" id="10_k4pyv"]
-[ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="12_a4lxk"]
-[ext_resource type="PackedScene" uid="uid://dow0k4o17yhgn" path="res://scenes/milestones/milestone.tscn" id="14_kxww3"]
-[ext_resource type="Texture2D" uid="uid://v5tn1ysqg3xe" path="res://assets/sprites/milestones/1_planter_0.png" id="15_4gjuh"]
-[ext_resource type="Texture2D" uid="uid://c5jrtvhplc2ie" path="res://assets/sprites/milestones/1_planter_1.png" id="16_thp8t"]
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_so10r"]
+[ext_resource type="Texture2D" uid="uid://dopo3lvsqtwjy" path="res://assets/sprites/tilesheets/grass.png" id="2_8jokt"]
+[ext_resource type="Texture2D" uid="uid://csp4jxyy5klco" path="res://assets/sprites/tilesheets/path.png" id="3_vtp3l"]
+[ext_resource type="Texture2D" uid="uid://wtl6fxpystij" path="res://assets/sprites/tilesheets/tilesheet_v1.png" id="4_vxnb4"]
+[ext_resource type="Texture2D" uid="uid://cx14uvcarpgnn" path="res://assets/sprites/tilesheets/walls.png" id="5_hkbvg"]
+[ext_resource type="Texture2D" uid="uid://j2xiyjm1n18k" path="res://assets/sprites/tilesheets/fence.png" id="6_qq3rb"]
+[ext_resource type="Texture2D" uid="uid://ciq3ecyuhjwd5" path="res://assets/sprites/tilesheets/wild_grass.png" id="7_icv2x"]
+[ext_resource type="Texture2D" uid="uid://cghkxwy5rf60y" path="res://assets/sprites/environment/particle_01.png" id="8_xc3es"]
+[ext_resource type="Script" path="res://scenes/character/character_manager.gd" id="9_e10ft"]
+[ext_resource type="PackedScene" uid="uid://b17qw8h3p56hn" path="res://scenes/character/character.tscn" id="10_dqrn4"]
+[ext_resource type="Script" path="res://scenes/collectibles/collectibles_manager.gd" id="11_3no4f"]
+[ext_resource type="PackedScene" uid="uid://4la4qunjwgq2" path="res://scenes/collectibles/collectible.tscn" id="12_1asot"]
+[ext_resource type="Resource" uid="uid://b6uhb6w2487h" path="res://data/collectibles/collectible_01.tres" id="13_8t0bb"]
+[ext_resource type="PackedScene" uid="uid://dow0k4o17yhgn" path="res://scenes/milestones/milestone.tscn" id="14_ysned"]
+[ext_resource type="Texture2D" uid="uid://v5tn1ysqg3xe" path="res://assets/sprites/milestones/1_planter_0.png" id="15_56ss4"]
+[ext_resource type="Texture2D" uid="uid://c5jrtvhplc2ie" path="res://assets/sprites/milestones/1_planter_1.png" id="16_s552a"]
+[ext_resource type="Script" path="res://scenes/character/scripts/characters_camera.gd" id="17_a2t20"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o5oa"]
-texture = ExtResource("2_q8y6u")
+texture = ExtResource("2_8jokt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -43,7 +43,7 @@ tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_0o5oa")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5jkmy"]
-texture = ExtResource("3_ch2md")
+texture = ExtResource("3_vtp3l")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -134,7 +134,7 @@ terrain_set_0/terrain_0/color = Color(0.080029, 0.405403, 0.617443, 1)
 sources/0 = SubResource("TileSetAtlasSource_5jkmy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na3fn"]
-texture = ExtResource("2_iqamp")
+texture = ExtResource("4_vxnb4")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/custom_data_0 = true
@@ -232,7 +232,7 @@ texture_region_size = Vector2i(32, 32)
 11:3/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oiqf6"]
-texture = ExtResource("3_ewjwy")
+texture = ExtResource("5_hkbvg")
 separation = Vector2i(0, 6)
 texture_region_size = Vector2i(32, 42)
 0:0/0 = 0
@@ -660,7 +660,7 @@ texture_region_size = Vector2i(32, 42)
 10:2/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tntbl"]
-texture = ExtResource("6_a2ep4")
+texture = ExtResource("6_qq3rb")
 separation = Vector2i(0, 6)
 texture_region_size = Vector2i(32, 42)
 0:0/0 = 0
@@ -790,7 +790,7 @@ sources/1 = SubResource("TileSetAtlasSource_oiqf6")
 sources/3 = SubResource("TileSetAtlasSource_tntbl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1ek8"]
-texture = ExtResource("7_54p2o")
+texture = ExtResource("7_icv2x")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -989,7 +989,7 @@ color = Color(1, 1, 1, 0.572549)
 
 [node name="Level_01" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_ea041")
+script = ExtResource("1_so10r")
 
 [node name="Tilemaps" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -1026,7 +1026,7 @@ z_index = 99
 position = Vector2(176, 112)
 amount = 60
 process_material = SubResource("ParticleProcessMaterial_4orw6")
-texture = ExtResource("5_q15es")
+texture = ExtResource("8_xc3es")
 lifetime = 8.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Visuals"]
@@ -1034,9 +1034,9 @@ color = Color(0.953688, 0.949241, 0.914448, 1)
 
 [node name="Characters" type="Node2D" parent="."]
 y_sort_enabled = true
-script = ExtResource("3_4vcmf")
+script = ExtResource("9_e10ft")
 
-[node name="Character" parent="Characters" instance=ExtResource("4_wydeo")]
+[node name="Character" parent="Characters" instance=ExtResource("10_dqrn4")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(112, 112)
@@ -1044,23 +1044,23 @@ position = Vector2(112, 112)
 [node name="Hazards" type="Node2D" parent="."]
 
 [node name="Collectibles" type="Node2D" parent="."]
-script = ExtResource("8_wk0vf")
+script = ExtResource("11_3no4f")
 
-[node name="Collectible" parent="Collectibles" instance=ExtResource("9_p3fsd")]
+[node name="Collectible" parent="Collectibles" instance=ExtResource("12_1asot")]
 position = Vector2(304, 112)
-stats = ExtResource("10_k4pyv")
+stats = ExtResource("13_8t0bb")
 
 [node name="Milestones" type="Node2D" parent="."]
 
-[node name="Milestone" parent="Milestones" instance=ExtResource("14_kxww3")]
+[node name="Milestone" parent="Milestones" instance=ExtResource("14_ysned")]
 position = Vector2(304, -28)
-incomplete_sprite_texture = ExtResource("15_4gjuh")
-complete_sprite_texture = ExtResource("16_thp8t")
+incomplete_sprite_texture = ExtResource("15_56ss4")
+complete_sprite_texture = ExtResource("16_s552a")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
 position = Vector2(112, 112)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
-script = ExtResource("12_a4lxk")
+script = ExtResource("17_a2t20")
 movement_enabled = true

@@ -1,0 +1,6 @@
+[wait time="3.0"]
+tikara: I should continue making more raised beds around the village!
+tikara: But I should be careful to disturb the wildlife living in the long grass.
+tikara: I'll avoid disturbing the butterflies and focus on the job at hand!
+[signal arg="move"]
+[end_timeline]

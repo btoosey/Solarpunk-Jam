@@ -1,0 +1,4 @@
+[wait time="3.0"]
+bradley: Don't forget, press Q to undo if you get stuck!
+[signal arg="move"]
+[end_timeline]
