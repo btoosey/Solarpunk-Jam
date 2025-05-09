@@ -4,6 +4,7 @@ extends CanvasLayer
 signal level_selected(path)
 
 @onready var current_level: LevelIcon = $LevelIcon1
+@onready var timer: Timer = $Timer
 
 var enabled := false
 
@@ -34,6 +35,8 @@ func _input(event: InputEvent) -> void:
 			update_level_icon_highlighter_position()
 	if event.is_action_pressed("level_select"):
 		if current_level.next_scene_path:
+			enabled = false
+			timer.start()
 			level_selected.emit(current_level.next_scene_path)
 
 
@@ -58,3 +61,7 @@ func unlock_surrounding_levels() -> void:
 
 func set_current_level_as_complete() -> void:
 	current_level.modulate.g = 0.3
+
+
+func _on_timer_timeout() -> void:
+	enabled = true
