@@ -46,7 +46,7 @@ func move_characters(direction) -> void:
 
 func _on_character_touched_hazard() -> void:
 	stop_characters_moving()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	reload_level.emit()
 
 

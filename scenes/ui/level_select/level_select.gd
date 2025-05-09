@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 signal level_selected(path)
@@ -16,23 +16,23 @@ func _input(event: InputEvent) -> void:
 	if not enabled:
 		return
 
-	if event.is_action_pressed("ui_up") and current_level.next_level_up:
+	if event.is_action_pressed("level_select_up") and current_level.next_level_up:
 		if LevelsData.level_unlocked_status[current_level.next_level_up.level_name]:
 			current_level = current_level.next_level_up
 			update_level_icon_highlighter_position()
-	if event.is_action_pressed("ui_down") and current_level.next_level_down:
+	if event.is_action_pressed("level_select_down") and current_level.next_level_down:
 		if LevelsData.level_unlocked_status[current_level.next_level_down.level_name]:
 			current_level = current_level.next_level_down
 			update_level_icon_highlighter_position()
-	if event.is_action_pressed("ui_left") and current_level.next_level_left:
+	if event.is_action_pressed("level_select_left") and current_level.next_level_left:
 		if LevelsData.level_unlocked_status[current_level.next_level_left.level_name]:
 			current_level = current_level.next_level_left
 			update_level_icon_highlighter_position()
-	if event.is_action_pressed("ui_right") and current_level.next_level_right:
+	if event.is_action_pressed("level_select_right") and current_level.next_level_right:
 		if LevelsData.level_unlocked_status[current_level.next_level_right.level_name]:
 			current_level = current_level.next_level_right
 			update_level_icon_highlighter_position()
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("level_select"):
 		if current_level.next_scene_path:
 			level_selected.emit(current_level.next_scene_path)
 

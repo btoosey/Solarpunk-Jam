@@ -1,19 +1,105 @@
-[gd_scene load_steps=8 format=3 uid="uid://b17qw8h3p56hn"]
+[gd_scene load_steps=21 format=3 uid="uid://b17qw8h3p56hn"]
 
 [ext_resource type="Script" path="res://scenes/character/scripts/character.gd" id="1_41qnt"]
 [ext_resource type="Script" path="res://scenes/character/components/grid_mover.gd" id="2_k5lh0"]
 [ext_resource type="Shader" path="res://shaders/character_outline.gdshader" id="2_skjst"]
 [ext_resource type="Texture2D" uid="uid://bey6wk1g2c530" path="res://assets/sprites/characters/characters.png" id="2_tyj6d"]
 [ext_resource type="Script" path="res://scenes/character/components/hazard_detector.gd" id="3_i6sdv"]
+[ext_resource type="Texture2D" uid="uid://vrqm7doo1so3" path="res://assets/sprites/characters/butterflies.png" id="6_1g0tr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fbo0t"]
 resource_local_to_scene = true
 shader = ExtResource("2_skjst")
-shader_parameter/line_colour = Color(0.505882, 0.87451, 1, 1)
+shader_parameter/line_colour = Color(0.980392, 0.878431, 0.360784, 1)
 shader_parameter/line_thickness = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvcae"]
 size = Vector2(12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mihw"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp2kl"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yibi3"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w37yh"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2v8i"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2uou"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18gnb"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb44q"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqf8h"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hlqs"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge4pq"]
+atlas = ExtResource("6_1g0tr")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjuau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mihw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp2kl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yibi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w37yh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2v8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2uou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18gnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb44q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqf8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hlqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge4pq")
+}],
+"loop": true,
+"name": &"butterflies",
+"speed": 8.0
+}]
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("grid_mover", "hazard_detector") groups=["characters"]]
 collision_layer = 2
@@ -42,3 +128,12 @@ script = ExtResource("3_i6sdv")
 shape = SubResource("RectangleShape2D_jvcae")
 
 [node name="SpeechMarker" type="Marker2D" parent="."]
+position = Vector2(15, -18)
+
+[node name="ButterflyAnim" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -33)
+sprite_frames = SubResource("SpriteFrames_xjuau")
+animation = &"butterflies"
+frame_progress = 0.346732
+speed_scale = 1.2

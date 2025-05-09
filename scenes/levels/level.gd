@@ -58,9 +58,8 @@ func _on_level_completed() -> void:
 	characters.stop_characters_moving()
 	$"../../LevelSelect".unlock_surrounding_levels()
 	$"../../LevelSelect".set_current_level_as_complete()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.5).timeout
 	game_state_machine._on_transition_requested(game_state_machine.current_state, GameState.State.LEVEL_SELECT)
-	LevelsData.is_in_session = false
 
 
 func start_level_dialogue() -> void:
