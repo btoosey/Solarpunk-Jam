@@ -53,118 +53,99 @@ grow_vertical = 2
 theme = SubResource("Theme_ivwmv")
 
 [node name="LevelIcon1" parent="LevelSelect" node_paths=PackedStringArray("next_level_right") instance=ExtResource("5_0s6f8")]
-modulate = Color(1, 1, 1, 1)
-offset_left = 177.0
-offset_top = 208.0
-offset_right = 217.0
-offset_bottom = 248.0
-level_name = "Level_01"
+offset_left = 205.0
+offset_top = 205.0
+offset_right = 275.0
+offset_bottom = 275.0
 level_name_shorthand = "01"
-next_scene_path = "res://scenes/levels/level_01.tscn"
+next_scene_path = "res://scenes/levels/Level_01.tscn"
 next_level_right = NodePath("../LevelIcon2")
 
-[node name="LevelIcon2" parent="LevelSelect" node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("5_0s6f8")]
-offset_left = 356.0
-offset_top = 207.0
-offset_right = 396.0
-offset_bottom = 247.0
+[node name="LevelIcon2" parent="LevelSelect" node_paths=PackedStringArray("next_level_left") instance=ExtResource("5_0s6f8")]
+offset_left = 333.0
+offset_top = 205.0
+offset_right = 403.0
+offset_bottom = 275.0
 level_name = "Level_02"
 level_name_shorthand = "02"
 next_scene_path = "res://scenes/levels/Level_02.tscn"
 next_level_left = NodePath("../LevelIcon1")
-next_level_right = NodePath("../LevelIcon3")
 
-[node name="LevelIcon3" parent="LevelSelect" node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("5_0s6f8")]
-offset_left = 408.0
-offset_top = 206.0
-offset_right = 448.0
-offset_bottom = 246.0
+[node name="LevelIcon3" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 413.0
+offset_top = 205.0
+offset_right = 483.0
+offset_bottom = 275.0
 level_name = "Level_03"
 level_name_shorthand = "03"
 next_scene_path = "res://scenes/levels/Level_03.tscn"
-next_level_down = NodePath("../LevelIcon4")
-next_level_left = NodePath("../LevelIcon2")
 
-[node name="LevelIcon4" parent="LevelSelect" node_paths=PackedStringArray("next_level_up", "next_level_right") instance=ExtResource("5_0s6f8")]
-offset_left = 409.0
-offset_top = 257.0
-offset_right = 449.0
-offset_bottom = 297.0
+[node name="LevelIcon4" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 493.0
+offset_top = 205.0
+offset_right = 563.0
+offset_bottom = 275.0
 level_name = "Level_04"
 level_name_shorthand = "04"
-next_scene_path = "res://scenes/levels/level_04.tscn"
-next_level_up = NodePath("../LevelIcon3")
-next_level_right = NodePath("../LevelIcon5")
+next_scene_path = "res://scenes/levels/Level_04.tscn"
 
-[node name="LevelIcon5" parent="LevelSelect" node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("5_0s6f8")]
-offset_left = 593.0
-offset_top = 257.0
-offset_right = 633.0
-offset_bottom = 297.0
+[node name="LevelIcon5" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 573.0
+offset_top = 205.0
+offset_right = 643.0
+offset_bottom = 275.0
 level_name = "Level_05"
 level_name_shorthand = "05"
 next_scene_path = "res://scenes/levels/Level_05.tscn"
-next_level_left = NodePath("../LevelIcon4")
-next_level_right = NodePath("../LevelIcon6")
 
-[node name="LevelIcon6" parent="LevelSelect" node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("5_0s6f8")]
-offset_left = 649.0
-offset_top = 257.0
-offset_right = 689.0
-offset_bottom = 297.0
+[node name="LevelIcon6" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 653.0
+offset_top = 205.0
+offset_right = 723.0
+offset_bottom = 275.0
 level_name = "Level_06"
 level_name_shorthand = "06"
 next_scene_path = "res://scenes/levels/Level_06.tscn"
-next_level_left = NodePath("../LevelIcon5")
-next_level_right = NodePath("../LevelIcon7")
 
-[node name="LevelIcon7" parent="LevelSelect" node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("5_0s6f8")]
-offset_left = 705.0
-offset_top = 257.0
-offset_right = 745.0
-offset_bottom = 297.0
+[node name="LevelIcon7" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 733.0
+offset_top = 205.0
+offset_right = 803.0
+offset_bottom = 275.0
 level_name = "Level_07"
 level_name_shorthand = "07"
 next_scene_path = "res://scenes/levels/Level_07.tscn"
-next_level_down = NodePath("../LevelIcon8")
-next_level_left = NodePath("../LevelIcon6")
 
-[node name="LevelIcon8" parent="LevelSelect" node_paths=PackedStringArray("next_level_up", "next_level_down") instance=ExtResource("5_0s6f8")]
-offset_left = 705.0
-offset_top = 313.0
-offset_right = 745.0
-offset_bottom = 353.0
+[node name="LevelIcon8" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 813.0
+offset_top = 205.0
+offset_right = 883.0
+offset_bottom = 275.0
 level_name = "Level_08"
 level_name_shorthand = "08"
 next_scene_path = "res://scenes/levels/Level_08.tscn"
-next_level_up = NodePath("../LevelIcon7")
-next_level_down = NodePath("../LevelIcon9")
 
-[node name="LevelIcon9" parent="LevelSelect" node_paths=PackedStringArray("next_level_up", "next_level_left") instance=ExtResource("5_0s6f8")]
-offset_left = 705.0
-offset_top = 481.0
-offset_right = 745.0
-offset_bottom = 521.0
+[node name="LevelIcon9" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 893.0
+offset_top = 205.0
+offset_right = 963.0
+offset_bottom = 275.0
 level_name = "Level_09"
 level_name_shorthand = "09"
 next_scene_path = "res://scenes/levels/Level_09.tscn"
-next_level_up = NodePath("../LevelIcon8")
-next_level_left = NodePath("../LevelIcon10")
 
-[node name="LevelIcon10" parent="LevelSelect" node_paths=PackedStringArray("next_level_right") instance=ExtResource("5_0s6f8")]
-offset_left = 649.0
-offset_top = 481.0
-offset_right = 689.0
-offset_bottom = 521.0
+[node name="LevelIcon10" parent="LevelSelect" instance=ExtResource("5_0s6f8")]
+offset_left = 973.0
+offset_top = 205.0
+offset_right = 1043.0
+offset_bottom = 275.0
 level_name = "Level_10"
 level_name_shorthand = "10"
 next_scene_path = "res://scenes/levels/Level_10.tscn"
-next_level_right = NodePath("../LevelIcon9")
 
 [node name="LevelIconHighlighter" type="TextureRect" parent="LevelSelect"]
-offset_right = 48.0
-offset_bottom = 48.0
-pivot_offset = Vector2(24, 24)
+offset_right = 90.0
+offset_bottom = 90.0
 texture = ExtResource("7_3fosn")
 
 [node name="Timer" type="Timer" parent="LevelSelect"]
