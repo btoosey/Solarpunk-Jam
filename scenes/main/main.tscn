@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dpskof2wm3lbm"]
+[gd_scene load_steps=21 format=3 uid="uid://dpskof2wm3lbm"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_loader_reloader.gd" id="1_c6cci"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_fuqf3"]
@@ -22,6 +22,10 @@ texture = ExtResource("8_m5kt7")
 
 [sub_resource type="Theme" id="Theme_ivwmv"]
 Panel/styles/panel = SubResource("StyleBoxTexture_5ism3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_qhch7"]
+font = ExtResource("15_qipyu")
+font_size = 64
 
 [sub_resource type="LabelSettings" id="LabelSettings_r2ie6"]
 font = ExtResource("15_qipyu")
@@ -192,7 +196,6 @@ layer = 2
 [node name="PauseMenuScreen" type="CanvasLayer" parent="."]
 process_mode = 3
 layer = 3
-visible = false
 script = ExtResource("10_224t2")
 
 [node name="Panel" type="Panel" parent="PauseMenuScreen"]
@@ -229,7 +232,8 @@ theme_override_constants/separation = 16
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
-text = "Game Paused"
+text = "Game  Paused"
+label_settings = SubResource("LabelSettings_qhch7")
 
 [node name="ResumeButton" type="Button" parent="PauseMenuScreen/Control/PauseMenu"]
 layout_mode = 2
@@ -249,29 +253,15 @@ layout_mode = 2
 [node name="AudioTitles" type="VBoxContainer" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio"]
 layout_mode = 2
 
-[node name="MasterVol" type="Label" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioTitles"]
-layout_mode = 2
-text = "Master"
-
 [node name="MusicVol" type="Label" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioTitles"]
 layout_mode = 2
 text = "Music
 "
 
-[node name="SFXVol" type="Label" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioTitles"]
-layout_mode = 2
-text = "Sound FX"
-
 [node name="AudioSliders" type="VBoxContainer" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 13
-
-[node name="MasterSlider" type="HSlider" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders"]
-layout_mode = 2
-max_value = 1.5
-step = 0.001
-value = 1.0
+size_flags_vertical = 4
 
 [node name="MusicSlider" type="HSlider" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders"]
 layout_mode = 2
@@ -279,13 +269,8 @@ max_value = 1.5
 step = 0.001
 value = 1.0
 
-[node name="SFXSlider" type="HSlider" parent="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders"]
-layout_mode = 2
-max_value = 1.5
-step = 0.001
-value = 1.0
-
 [node name="MainMenu" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("13_sq0eh")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
@@ -312,6 +297,4 @@ label_settings = SubResource("LabelSettings_r2ie6")
 [connection signal="timeout" from="LevelSelect/Timer" to="LevelSelect" method="_on_timer_timeout"]
 [connection signal="pressed" from="PauseMenuScreen/Control/PauseMenu/ResumeButton" to="PauseMenuScreen" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenuScreen/Control/PauseMenu/LevelSelectButton" to="PauseMenuScreen" method="_on_level_select_button_pressed"]
-[connection signal="value_changed" from="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders/MasterSlider" to="PauseMenuScreen" method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders/MusicSlider" to="PauseMenuScreen" method="_on_music_slider_value_changed"]
-[connection signal="value_changed" from="PauseMenuScreen/Control/PauseMenu/VBoxContainer/Audio/AudioSliders/SFXSlider" to="PauseMenuScreen" method="_on_sfx_slider_value_changed"]
