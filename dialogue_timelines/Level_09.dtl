@@ -1,0 +1,8 @@
+[wait time="3.0"]
+bradley: There he is!
+tikara: Hi Elim!
+elim: Hey guys!
+elim: I've just finished installing our first heliokites.
+elim: What do you think?
+[signal arg="move"]
+[end_timeline]

@@ -10,7 +10,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0.140447, 0.140447, 0.140447, 1, 0.140447,
 gradient = SubResource("Gradient_275dg")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yjesn"]
-polygon = PackedVector2Array(-42, -114, -42, -75, -9, -7, -2, -1, 48, -73, 48, -116)
+polygon = PackedVector2Array(-117, -1, -48, 68, 7, -3, -4, -4, -40, -75, -43, -95)
 
 [node name="Milestone" type="Node2D"]
 script = ExtResource("1_1wh7v")
@@ -22,11 +22,12 @@ visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(-33.17, -40.3493)
+position = Vector2(-23.2719, -27.4759)
 rotation = -0.935582
-scale = Vector2(1.65491, 1.42605)
+scale = Vector2(1.65491, 1.27471)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_3yb3m")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(0, 14)
 occluder = SubResource("OccluderPolygon2D_yjesn")

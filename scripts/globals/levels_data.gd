@@ -10,6 +10,7 @@ var level_unlocked_status := {
 	"Level_06": true,
 	"Level_07": true,
 	"Level_08": true,
+	"Level_09": true,
 }
 
 var is_in_session := false
