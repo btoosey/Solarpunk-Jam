@@ -1069,6 +1069,36 @@ position = Vector2(112, 16)
 [node name="Hazard3" parent="Hazards" instance=ExtResource("11_7oc81")]
 position = Vector2(112, 48)
 
+[node name="Hazard4" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(48, 16)
+
+[node name="Hazard5" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(16, 16)
+
+[node name="Hazard6" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(16, -112)
+
+[node name="Hazard7" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(48, -112)
+
+[node name="Hazard8" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(48, -144)
+
+[node name="Hazard9" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(-48, -176)
+
+[node name="Hazard10" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(-112, -112)
+
+[node name="Hazard11" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(-48, 80)
+
+[node name="Hazard12" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(-112, 16)
+
+[node name="Hazard13" parent="Hazards" instance=ExtResource("11_7oc81")]
+position = Vector2(-144, 48)
+
 [node name="Collectibles" type="Node2D" parent="."]
 script = ExtResource("12_okkqh")
 
