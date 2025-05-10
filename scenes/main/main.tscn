@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dpskof2wm3lbm"]
+[gd_scene load_steps=19 format=3 uid="uid://dpskof2wm3lbm"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_loader_reloader.gd" id="1_c6cci"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_fuqf3"]
@@ -12,12 +12,20 @@
 [ext_resource type="Texture2D" uid="uid://dlf4qg1a4cue3" path="res://assets/sprites/ui/level_select/background/level_select_bg.png" id="8_m5kt7"]
 [ext_resource type="Script" path="res://scenes/ui/pause_menu/pause_menu_screen.gd" id="10_224t2"]
 [ext_resource type="PackedScene" uid="uid://b8fohrtgjtcol" path="res://scenes/ui/scene_transition/scene_transition.tscn" id="11_v2wjr"]
+[ext_resource type="Script" path="res://scenes/ui/mein_menu/main_menu.gd" id="13_sq0eh"]
+[ext_resource type="Texture2D" uid="uid://ba6eg36k81j7b" path="res://assets/sprites/ui/main_menu/background.png" id="14_5lxbg"]
+[ext_resource type="FontFile" uid="uid://dqhehd77i5bq6" path="res://assets/fonts/Folies Bergere Medium.ttf" id="15_qipyu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ism3"]
 texture = ExtResource("8_m5kt7")
 
 [sub_resource type="Theme" id="Theme_ivwmv"]
 Panel/styles/panel = SubResource("StyleBoxTexture_5ism3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_r2ie6"]
+font = ExtResource("15_qipyu")
+font_size = 32
+font_color = Color(0.537255, 0.803922, 0.392157, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fuqf3")
@@ -27,7 +35,7 @@ script = ExtResource("1_c6cci")
 
 [node name="GameStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_y4tfv")
-initial_state = NodePath("GameLevelSelectState")
+initial_state = NodePath("GameStartState")
 
 [node name="GameStartState" type="Node" parent="GameStateMachine"]
 script = ExtResource("2_gxkf8")
@@ -274,6 +282,29 @@ layout_mode = 2
 max_value = 1.5
 step = 0.001
 value = 1.0
+
+[node name="MainMenu" type="CanvasLayer" parent="."]
+script = ExtResource("13_sq0eh")
+
+[node name="Background" type="TextureRect" parent="MainMenu"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("14_5lxbg")
+
+[node name="Label" type="Label" parent="MainMenu"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -286.0
+offset_top = -169.0
+offset_right = 286.0
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press  [SPACE]  or  [ENTER]  to begin"
+label_settings = SubResource("LabelSettings_r2ie6")
 
 [connection signal="level_selected" from="LevelSelect" to="LevelLoaderReloader" method="_on_level_select_level_selected"]
 [connection signal="timeout" from="LevelSelect/Timer" to="LevelSelect" method="_on_timer_timeout"]
