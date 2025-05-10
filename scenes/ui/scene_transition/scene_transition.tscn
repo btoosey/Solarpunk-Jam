@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" path="res://scenes/ui/scene_transition/scene_transition.gd" id="1_mnchq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se7eo"]
-bg_color = Color(0.537255, 0.803922, 0.392157, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkx5y"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Theme" id="Theme_ftg6h"]
-Panel/styles/panel = SubResource("StyleBoxFlat_se7eo")
+Panel/styles/panel = SubResource("StyleBoxFlat_jkx5y")
 
 [node name="SceneTransition" type="CanvasLayer"]
 script = ExtResource("1_mnchq")
 
 [node name="Panel" type="Panel" parent="."]
-modulate = Color(0.537255, 0.803922, 0.392157, 0)
+modulate = Color(0, 0, 0, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

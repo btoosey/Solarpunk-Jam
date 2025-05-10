@@ -6,11 +6,15 @@ signal level_selected(path)
 @onready var current_level: LevelIcon = $LevelIcon1
 @onready var timer: Timer = $Timer
 
+const LEVEL_ICON_COMPLETE = preload("res://assets/sprites/ui/level_select/level_icons/level_icon_complete.png")
+const LEVEL_ICON_UNLOCKED = preload("res://assets/sprites/ui/level_select/level_icons/level_icon_unlocked.png")
+
 var enabled := false
 
 
 func _ready() -> void:
 	update_level_icon_highlighter_position()
+	unlock_level(current_level)
 
 
 func _input(event: InputEvent) -> void:
@@ -41,26 +45,32 @@ func _input(event: InputEvent) -> void:
 
 
 func update_level_icon_highlighter_position() -> void:
-	$LevelIconHighlighter.global_position = current_level.global_position
+	$LevelIconHighlighter.global_position = current_level.marker_2d.global_position
 
 
 func unlock_surrounding_levels() -> void:
 	if current_level.next_level_up:
-		LevelsData.level_unlocked_status[current_level.next_level_up.level_name] = true
-		current_level.next_level_up.modulate.a = 1
+		unlock_level(current_level.next_level_up)
 	if current_level.next_level_down:
-		LevelsData.level_unlocked_status[current_level.next_level_down.level_name] = true
-		current_level.next_level_down.modulate.a = 1
+		unlock_level(current_level.next_level_down)
 	if current_level.next_level_left:
-		LevelsData.level_unlocked_status[current_level.next_level_left.level_name] = true
-		current_level.next_level_left.modulate.a = 1
+		unlock_level(current_level.next_level_left)
 	if current_level.next_level_right:
-		LevelsData.level_unlocked_status[current_level.next_level_right.level_name] = true
-		current_level.next_level_right.modulate.a = 1
+		unlock_level(current_level.next_level_right)
 
 
 func set_current_level_as_complete() -> void:
-	current_level.modulate.g = 0.3
+	current_level.texture_rect.texture = LEVEL_ICON_COMPLETE
+	current_level.label.label_settings.font_color = Color.html("89cd64")
+
+
+func unlock_level(level) -> void:
+	if LevelsData.level_unlocked_status[level.level_name] == true:
+		return
+
+	LevelsData.level_unlocked_status[level.level_name] = true
+	level.texture_rect.texture = LEVEL_ICON_UNLOCKED
+	level.label.show()
 
 
 func _on_timer_timeout() -> void:

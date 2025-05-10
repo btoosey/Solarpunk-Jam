@@ -11,6 +11,10 @@ extends Control
 @export var next_level_left: LevelIcon
 @export var next_level_right: LevelIcon
 
+@onready var texture_rect: TextureRect = $TextureRect
+@onready var marker_2d: Marker2D = $Marker2D
+@onready var label: Label = $Label
+
 
 func _ready() -> void:
-	$Label.text = level_name_shorthand
+	label.text = level_name_shorthand
