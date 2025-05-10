@@ -1,0 +1,8 @@
+[wait time="3.0"]
+tikara: These heliokites are great!
+tikara: They let us grow fruit and veg we used to have to import from abroad!
+elim: Not only that, but they require very little energy too!
+elim: And that's covered by all those solar panels you installed.
+bradley: Amazing! Let's set up some more!
+[signal arg="move"]
+[end_timeline]

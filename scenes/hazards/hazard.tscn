@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1u45op0b501d"]
+[gd_scene load_steps=3 format=3 uid="uid://d1u45op0b501d"]
 
-[ext_resource type="Texture2D" uid="uid://dwufhuvu4g3m7" path="res://assets/sprites/hazards/hazard_tile_v1.png" id="1_1ksm1"]
 [ext_resource type="Script" path="res://scenes/hazards/hazard.gd" id="1_laqb7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfods"]
@@ -13,8 +12,5 @@ script = ExtResource("1_laqb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tfods")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_1ksm1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

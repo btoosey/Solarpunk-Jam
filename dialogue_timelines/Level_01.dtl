@@ -1,3 +1,5 @@
 [wait time="3.0"]
-tikara: Hi!
+tikara: Let's start by installing some raised beds!
+tikara: Use WASD to move.
 [signal arg="move"]
+[end_timeline]

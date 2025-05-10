@@ -132,6 +132,7 @@ position = Vector2(15, -18)
 
 [node name="ButterflyAnim" type="AnimatedSprite2D" parent="."]
 visible = false
+z_index = 50
 position = Vector2(0, -33)
 sprite_frames = SubResource("SpriteFrames_xjuau")
 animation = &"butterflies"

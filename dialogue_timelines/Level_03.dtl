@@ -1,5 +1,7 @@
-[wait time="2.0"]
+[wait time="3.0"]
 tikara: Hi Bradley!
-bradley: Hi!
+bradley: Oh, hey Tikara, what's up?
+tikara: Could you help me with these planters please?
+bradley: Sure thing!
 [signal arg="move"]
 [end_timeline]

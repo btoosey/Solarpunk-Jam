@@ -1,0 +1,6 @@
+[wait time="3.0"]
+bradley: Wow, looks like it'll be tough to avoid the grass here!
+tikara: Team work makes the dream work!
+tikara: In fact, I think Elim said he'd help us in a little bit!
+[signal arg="move"]
+[end_timeline]
