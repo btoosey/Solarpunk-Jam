@@ -10,7 +10,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0.140447, 0.140447, 0.140447, 1, 0.140447,
 gradient = SubResource("Gradient_275dg")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yjesn"]
-polygon = PackedVector2Array(-117, -1, -48, 68, 7, -3, -4, -4, -40, -75, -43, -95)
+polygon = PackedVector2Array(-100, -22, -25, 38, 7, -3, -4, -4, -40, -75, -43, -95)
 
 [node name="Milestone" type="Node2D"]
 script = ExtResource("1_1wh7v")
