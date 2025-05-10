@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cex8ct3hythqe"]
+[gd_scene load_steps=33 format=4 uid="uid://c4t4al0u1ymji"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_72oum"]
 [ext_resource type="Texture2D" uid="uid://dopo3lvsqtwjy" path="res://assets/sprites/tilesheets/grass.png" id="2_gafay"]
@@ -1002,14 +1002,14 @@ tile_set = SubResource("TileSet_sw21o")
 metadata/_edit_lock_ = true
 
 [node name="Paths" type="TileMapLayer" parent="Tilemaps"]
-tile_map_data = PackedByteArray("AAAaAAMAAAAAAAMAAAD0/wIAAAADAAMAAADz/wIAAAACAAMAAADy/wIAAAACAAMAAADx/wIAAAACAAMAAADw/wIAAAACAAMAAADv/wIAAAACAAMAAADu/wIAAAACAAMAAADt/wIAAAACAAMAAADs/wIAAAACAAMAAADr/wIAAAABAAMAAAD3/+7/AAAAAAAAAAD3/+//AAAAAAEAAAD3//D/AAAAAAEAAAD3//H/AAAAAAEAAAD3//L/AAAAAAEAAAD3//P/AAABAAIAAAD4//P/AAADAAAAAAD4//T/AAAAAAEAAAD4//X/AAAAAAEAAAD4//b/AAAAAAEAAAD5//f/AAADAAAAAAD5//j/AAAAAAEAAAD5//n/AAAAAAEAAAD5//r/AAABAAIAAAD6//r/AAADAAAAAAD6//v/AAAAAAEAAAD6//z/AAAAAAEAAAD6//3/AAABAAIAAAD7/wAAAAAAAAEAAAD7/wEAAAADAAIAAAD6/wEAAAABAAAAAAD6/wIAAAAAAAEAAAD6/wMAAAADAAIAAAD5/wMAAAABAAAAAAD5/wQAAAADAAIAAAD4/wQAAAACAAMAAAD3/wQAAAABAAAAAAD3/wUAAAADAAIAAAD2/wUAAAACAAMAAAD1/wUAAAACAAMAAAD0/wUAAAACAAMAAADz/wUAAAACAAMAAADy/wUAAAACAAMAAADx/wUAAAACAAMAAADw/wUAAAABAAMAAAD7////AAAAAAEAAAD7//7/AAAAAAEAAAD7//3/AAADAAAAAAD4//f/AAABAAIAAAARAAIAAAADAAIAAAAQAAIAAAACAAMAAAAPAAIAAAACAAMAAAAOAAIAAAACAAMAAAANAAIAAAACAAMAAAAMAAIAAAACAAMAAAALAAIAAAACAAMAAAAKAAIAAAACAAMAAAAJAAIAAAABAAIAAAAJAAEAAAADAAAAAAAIAAEAAAACAAMAAAAHAAEAAAABAAAAAAAHAAIAAAADAAIAAAAGAAIAAAACAAMAAAAFAAIAAAABAAIAAAAFAAEAAAADAAAAAAAEAAEAAAACAAMAAAADAAEAAAABAAAAAAADAAIAAAADAAIAAAACAAIAAAACAAMAAAABAAIAAAABAAIAAAABAAEAAAAAAAAAAAAEAP//AAABAAMAAAAFAP//AAACAAMAAAAGAP//AAACAAMAAAAHAP//AAACAAMAAAAIAP//AAACAAMAAAAJAP//AAACAAMAAAAKAP//AAACAAMAAAALAP//AAACAAMAAAAMAP//AAACAAMAAAANAP//AAACAAMAAAAOAP//AAADAAIAAAAOAP7/AAABAAEAAAAPAP7/AAACAAMAAAAQAP7/AAACAAMAAAARAP7/AAACAAMAAAASAP7/AAADAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAABAAIAAAAHAP3/AAACAAMAAAAIAP3/AAADAAIAAAAIAPz/AAABAAAAAAAJAPz/AAACAAMAAAAKAPz/AAADAAAAAAAKAP3/AAABAAIAAAALAP3/AAACAAMAAAAMAPz/AAABAAAAAAAMAP3/AAADAAIAAAANAPz/AAACAAMAAAAOAPz/AAADAAAAAAAOAP3/AAAAAAEAAAASAP//AAABAAIAAAATAP//AAACAAMAAAAUAP//AAADAAAAAAAUAAAAAAABAAEAAAAVAAAAAAACAAMAAAAWAAAAAAACAAMAAAAXAAAAAAACAAMAAAAYAAAAAAACAAMAAAAZAAAAAAACAAMAAAAaAAAAAAACAAMAAAASAAEAAAACAAMAAAATAAEAAAACAAMAAAAUAAEAAAADAAIAAAARAAEAAAABAAAAAAAbAAAAAAADAAMAAAA=")
+tile_map_data = PackedByteArray("AAAaAAMAAAAAAAMAAAAOAPr/AAABAAAAAAAPAPr/AAACAAMAAAD6//7/AAABAAAAAAD7//7/AAACAAMAAAD8//7/AAACAAMAAAD9//7/AAACAAMAAAD+//7/AAACAAMAAAD///7/AAACAAMAAAAAAP7/AAACAAMAAAABAP7/AAACAAMAAAACAP7/AAACAAMAAAADAP7/AAACAAMAAAAEAP7/AAACAAMAAAAFAP7/AAACAAMAAAAGAP7/AAACAAMAAAAHAP7/AAACAAMAAAAIAP7/AAACAAMAAAAJAP7/AAADAAIAAAAJAP3/AAABAAAAAAAKAPz/AAABAAAAAAALAPz/AAACAAMAAAAMAPz/AAACAAMAAAANAPz/AAADAAIAAAAKAP3/AAADAAIAAAANAPv/AAABAAAAAAAOAPv/AAADAAIAAAD6////AAADAAIAAAD5////AAABAAAAAAD4/wAAAAABAAAAAAD4/wEAAAADAAIAAAD3/wEAAAACAAMAAAD2/wEAAAABAAAAAAD2/wIAAAADAAIAAAD1/wIAAAACAAMAAAD0/wIAAAACAAMAAAD5/wAAAAADAAIAAAAQAPr/AAACAAMAAAARAPr/AAACAAMAAAASAPr/AAACAAMAAAATAPr/AAACAAMAAAAUAPr/AAACAAMAAAAVAPr/AAACAAMAAAAWAPr/AAACAAMAAAAXAPr/AAACAAMAAADz/wIAAAACAAMAAADy/wIAAAACAAMAAADx/wIAAAACAAMAAADw/wIAAAACAAMAAADv/wIAAAACAAMAAADu/wIAAAACAAMAAADt/wIAAAACAAMAAADs/wIAAAACAAMAAADr/wIAAAABAAMAAAAYAPr/AAADAAMAAAA=")
 tile_set = SubResource("TileSet_0jtfd")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="TileMapLayer" parent="Tilemaps"]
 z_index = 1
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAALAAMAAQACAAMAAAAKAAMAAQACAAMAAAAJAAMAAQACAAMAAAAIAAMAAQACAAMAAAAHAAMAAQACAAMAAAAGAAMAAQACAAMAAAAFAAMAAQACAAMAAAAEAAMAAQACAAMAAAADAAMAAQACAAMAAAACAAMAAQACAAMAAAABAAMAAQACAAMAAAAAAAMAAQABAAMAAAAAAAIAAwAAAAIAAAAAAAAAAQABAAIAAAAAAAEAAwAAAAAAAAABAAAAAQACAAMAAAACAAAAAQACAAMAAAADAAAAAQACAAMAAAAEAAAAAQACAAMAAAAFAAAAAQACAAMAAAAGAAAAAQACAAMAAAAHAAAAAQACAAMAAAAIAAAAAQACAAMAAAAJAAAAAQACAAMAAAAKAAAAAQACAAMAAAALAAAAAQACAAMAAAAMAAAAAQACAAMAAAAMAAEAAwAAAAAAAAAMAAIAAwAAAAIAAAAMAAMAAQADAAMAAAAAAP//AQAAAAAAAAADAP7/AwAAAAMAAAAHAP7/AwAAAAMAAAACAPv/AwAAAAIAAAACAPr/AwACAAAAAAABAPr/AwACAAMAAAAAAPr/AwABAAMAAAADAPr/AwADAAIAAAADAPn/AwAAAAEAAAADAPj/AwABAAAAAAAEAPj/AwACAAMAAAAFAPj/AwADAAIAAAAFAPf/AwABAAAAAAAGAPf/AwACAAMAAAAHAPf/AwACAAMAAAAIAPf/AwACAAMAAAAJAPf/AwACAAMAAAAKAPf/AwACAAMAAAALAPf/AwACAAMAAAAMAPf/AwADAAAAAAANAPj/AwADAAAAAAAMAPj/AwABAAIAAAANAPn/AwABAAIAAAAOAPn/AwADAAAAAAAOAPr/AwABAAIAAAAPAPr/AwADAAAAAAAPAPv/AwAAAAEAAAAPAPz/AwAAAAEAAAAPAP3/AwAAAAEAAAAPAP7/AwAAAAEAAAAPAP//AwAAAAIAAAAPAAAAAQADAAMAAAANAP3/AQAAAAMAAAALAPz/AQAAAAMAAAAJAP3/AQAAAAMAAAAHAPz/AQAAAAMAAAAFAP3/AQAAAAMAAAANAAAAAQACAAMAAAAOAAAAAQACAAMAAAA=")
+tile_map_data = PackedByteArray("AAADAPv/AQAAAAMAAAAAAAEAAQAAAAMAAAAFAPr/AQABAAIAAAD+/wIAAQADAAAAAAABAAMAAwABAAMAAAACAPn/AwADAAMAAAD///z/AQADAAAAAAAEAAAAAQABAAIAAAD//wMAAQADAAMAAAADAAMAAwACAAMAAAAEAAMAAwACAAMAAAACAAMAAwACAAMAAAAFAAEAAQAAAAEAAAAFAAIAAQAAAAIAAAAFAAMAAwADAAMAAAABAPn/AwACAAMAAAAAAPn/AwACAAMAAAD///n/AwACAAMAAAD+//n/AwABAAMAAAD+//r/AQAAAAAAAAD+//v/AQAAAAEAAAAEAPn/AQABAAMAAAAFAPn/AQADAAAAAAAGAAAAAQADAAMAAAAGAP7/AwAAAAIAAAAGAP3/AwAAAAAAAAD9////AwAAAAIAAAD9//7/AwAAAAAAAAD9//z/AQABAAMAAAAGAPv/AQAAAAIAAAAGAPr/AQADAAAAAAD9/wEAAQAAAAAAAAD9/wIAAQABAAIAAAD+//z/AQACAAIAAAAFAAAAAQACAAAAAAD+/wMAAQABAAIAAAD///3/AQAAAAIAAAAEAP//AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_hp2nx")
 metadata/_edit_lock_ = true
 
@@ -1017,7 +1017,7 @@ metadata/_edit_lock_ = true
 z_index = 1
 y_sort_enabled = true
 position = Vector2(0, 10)
-tile_map_data = PackedByteArray("AAACAAAAAAAAAAAAAAACAAEAAAAAAAIAAAAEAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAIAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAIAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAIAAAAEAAIAAAAAAAIAAAAEAPv/AAAEAAAAAAAEAPz/AAAHAAAAAAAEAP3/AAAAAAEAAAAEAP7/AAAAAAIAAAADAPr/AAABAAAAAAADAPv/AAABAAIAAAAEAPr/AAAEAAEAAAAAAPr/AAACAAAAAAAAAPv/AAAEAAIAAAAAAPz/AAAAAAEAAAAAAP3/AAAAAAEAAAAAAP7/AAAAAAIAAAACAPz/AAAAAAAAAAACAP3/AAAAAAEAAAACAP7/AAAAAAIAAAAFAPz/AAADAAIAAAAGAP7/AAAAAAIAAAAFAPv/AAAFAAAAAAAFAPr/AAACAAEAAAAGAPv/AAACAAIAAAAGAPr/AAACAAEAAAAIAP7/AAAAAAIAAAAIAP3/AAAAAAAAAAAKAP7/AAABAAIAAAABAPr/AAADAAAAAAABAPv/AAADAAIAAAAHAPv/AAACAAIAAAAHAPr/AAACAAEAAAAIAPr/AAACAAEAAAAIAPv/AAACAAIAAAAJAPr/AAACAAEAAAAKAPr/AAACAAEAAAAKAPv/AAACAAIAAAALAPv/AAACAAIAAAAMAPv/AAACAAIAAAAMAPr/AAACAAEAAAALAPr/AAACAAEAAAAEAPn/AAABAAEAAAAFAPn/AAACAAEAAAAGAPn/AAACAAEAAAAHAPn/AAACAAEAAAAIAPn/AAACAAEAAAAJAPn/AAACAAEAAAAKAPn/AAACAAEAAAALAPn/AAACAAEAAAAGAPj/AAAEAAEAAAAHAPj/AAACAAEAAAAIAPj/AAACAAEAAAAJAPj/AAACAAEAAAAKAPj/AAACAAEAAAALAP3/AAACAAAAAAALAP7/AAACAAIAAAAMAP7/AAACAAIAAAAMAP3/AAACAAAAAAANAP7/AAADAAIAAAANAP3/AAADAAAAAAANAPv/AAACAAIAAAANAPr/AAAFAAEAAAAOAPv/AAADAAIAAAAOAPr/AAADAAAAAAANAPn/AAADAAAAAAAMAPn/AAAFAAEAAAAMAPj/AAADAAAAAAALAPj/AAAFAAEAAAALAPf/AAADAAAAAAAKAPf/AAACAAAAAAAJAPf/AAACAAAAAAAIAPf/AAACAAAAAAAHAPf/AAACAAAAAAAGAPf/AAABAAAAAAAFAPj/AAACAAAAAAAEAPj/AAABAAAAAAAKAP3/AAABAAAAAAAJAPv/AAACAAIAAAAGAP3/AAAAAAAAAAD///v/AAABAAIAAAD///r/AAAFAAEAAAD///n/AAADAAEAAAD///j/AAAFAAAAAAD+//r/AAACAAIAAAD+//n/AAACAAEAAAD+//j/AAACAAEAAAD///f/AAACAAEAAAD///b/AAACAAEAAAD///X/AAACAAAAAAD+//b/AAAEAAEAAAD+//f/AAACAAEAAAD9//f/AAAEAAEAAAD9//j/AAACAAEAAAD9//n/AAAEAAAAAAD8//f/AAABAAAAAAD8//j/AAABAAEAAAD8//n/AAABAAIAAAD9//r/AAABAAIAAAD+//X/AAABAAAAAAD9//b/AAABAAAAAAAAAPj/AAADAAIAAAAAAPf/AAAFAAAAAAAAAPb/AAAFAAEAAAAAAPX/AAADAAAAAAABAPb/AAADAAAAAAABAPf/AAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAD///r/AAABAAAAAAD///v/AAABAAIAAAAAAPr/AAADAAAAAAAAAPv/AAADAAIAAAACAPr/AAAAAAAAAAACAPv/AAAAAAIAAAAEAPr/AAAAAAAAAAAEAPv/AAAAAAIAAAD//wAAAAAAAAAAAAD//wEAAAAAAAIAAAABAAAAAAAAAAAAAAABAAEAAAAAAAIAAAADAAAAAAABAAAAAAADAAEAAAABAAIAAAAEAAAAAAADAAAAAAAEAAEAAAADAAIAAAADAPj/AAAAAAAAAAADAPn/AAAAAAIAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAIAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAIAAAADAPz/AAAAAAAAAAADAP3/AAAAAAIAAAACAP7/AAAAAAAAAAACAP//AAAAAAIAAAABAPz/AAAAAAAAAAABAP3/AAAAAAIAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAIAAAD9////AAAAAAAAAAD9/wAAAAAAAAIAAAD9//z/AAAAAAAAAAD9//3/AAAAAAIAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAIAAAA=")
 tile_set = SubResource("TileSet_pt83w")
 metadata/_edit_lock_ = true
 
@@ -1041,137 +1041,96 @@ script = ExtResource("9_qadro")
 [node name="Character" parent="Characters" instance=ExtResource("10_8cfya")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(48, 48)
+position = Vector2(80, -176)
 
 [node name="Character2" parent="Characters" instance=ExtResource("10_8cfya")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(112, -80)
+position = Vector2(48, 80)
 character_type = 1
 
 [node name="Hazards" type="Node2D" parent="."]
 
 [node name="Hazard" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(48, -144)
+position = Vector2(112, -208)
 
 [node name="Hazard2" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(16, -112)
-
-[node name="Hazard3" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(16, -80)
-
-[node name="Hazard4" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(16, -48)
-
-[node name="Hazard5" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(80, -48)
+position = Vector2(-16, -144)
 
 [node name="Hazard6" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(80, -80)
-
-[node name="Hazard12" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(112, -144)
-
-[node name="Hazard13" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(144, -112)
-
-[node name="Hazard14" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(144, -80)
-
-[node name="Hazard15" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(144, -48)
-
-[node name="Hazard16" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(208, -48)
-
-[node name="Hazard17" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(272, -48)
-
-[node name="Hazard18" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(336, -48)
-
-[node name="Hazard19" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(368, -48)
-
-[node name="Hazard20" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(400, -48)
-
-[node name="Hazard21" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(432, -48)
-
-[node name="Hazard22" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(464, -144)
-
-[node name="Hazard23" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(432, -144)
-
-[node name="Hazard24" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(400, -144)
-
-[node name="Hazard25" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(336, -144)
-
-[node name="Hazard26" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(304, -144)
-
-[node name="Hazard27" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(272, -144)
-
-[node name="Hazard28" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(208, -144)
-
-[node name="Hazard29" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(176, -112)
+position = Vector2(208, -112)
 
 [node name="Hazard7" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(80, 48)
+position = Vector2(16, -144)
+
+[node name="Hazard3" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(80, -144)
+
+[node name="Hazard4" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(144, -144)
+
+[node name="Hazard5" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(-80, -80)
 
 [node name="Hazard8" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(144, 80)
+position = Vector2(48, -80)
 
 [node name="Hazard9" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(208, 48)
+position = Vector2(112, -80)
 
 [node name="Hazard10" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(272, 80)
+position = Vector2(16, -16)
 
 [node name="Hazard11" parent="Hazards" instance=ExtResource("11_g8bdl")]
-position = Vector2(336, 48)
+position = Vector2(80, -16)
+
+[node name="Hazard12" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(208, -16)
+
+[node name="Hazard13" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(-80, 16)
+
+[node name="Hazard14" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(-16, 48)
+
+[node name="Hazard15" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(48, 48)
+
+[node name="Hazard16" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(112, 48)
+
+[node name="Hazard17" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(144, 48)
+
+[node name="Hazard18" parent="Hazards" instance=ExtResource("11_g8bdl")]
+position = Vector2(16, 112)
 
 [node name="Collectibles" type="Node2D" parent="."]
 script = ExtResource("12_alnib")
 
 [node name="Collectible" parent="Collectibles" instance=ExtResource("13_pxkby")]
-position = Vector2(368, 48)
+position = Vector2(144, 80)
 stats = ExtResource("14_nxx48")
 
 [node name="Collectible2" parent="Collectibles" instance=ExtResource("13_pxkby")]
-position = Vector2(208, -112)
-stats = ExtResource("15_kab5p")
-
-[node name="Collectible3" parent="Collectibles" instance=ExtResource("13_pxkby")]
-position = Vector2(176, -48)
-stats = ExtResource("15_kab5p")
-
-[node name="Collectible4" parent="Collectibles" instance=ExtResource("13_pxkby")]
-position = Vector2(304, -48)
+position = Vector2(-16, -176)
 stats = ExtResource("15_kab5p")
 
 [node name="Milestones" type="Node2D" parent="."]
 
 [node name="Milestone" parent="Milestones" instance=ExtResource("16_c3p4e")]
-position = Vector2(448, 79)
+position = Vector2(-120, 15)
 incomplete_sprite_texture = ExtResource("17_l8s2d")
 complete_sprite_texture = ExtResource("18_w3y8j")
 
 [node name="Milestone2" parent="Milestones" instance=ExtResource("16_c3p4e")]
-position = Vector2(-24, -73)
+position = Vector2(-120, -121)
 collectible_group = 1
 incomplete_sprite_texture = ExtResource("17_l8s2d")
 complete_sprite_texture = ExtResource("18_w3y8j")
 
 [node name="CharacterCamera" type="Camera2D" parent="."]
-position = Vector2(80, -16)
+position = Vector2(64, -48)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
