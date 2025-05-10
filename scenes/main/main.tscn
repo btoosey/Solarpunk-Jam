@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dpskof2wm3lbm"]
+[gd_scene load_steps=20 format=3 uid="uid://dpskof2wm3lbm"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_loader_reloader.gd" id="1_c6cci"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_fuqf3"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_state_machine.gd" id="1_y4tfv"]
+[ext_resource type="AudioStream" uid="uid://cit8cmw1n0w8u" path="res://assets/audio/music/path-in-the-forest-149256.mp3" id="2_6v8qs"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_start_state.gd" id="2_gxkf8"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_level_select_state.gd" id="3_r0otn"]
 [ext_resource type="Script" path="res://scenes/main/components/game_state_machine/game_states/game_play_state.gd" id="4_sug4s"]
@@ -29,6 +30,7 @@ font_color = Color(0.537255, 0.803922, 0.392157, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_fuqf3")
+main_theme = ExtResource("2_6v8qs")
 
 [node name="LevelLoaderReloader" type="Node" parent="."]
 script = ExtResource("1_c6cci")
