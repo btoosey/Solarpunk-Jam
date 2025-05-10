@@ -77,6 +77,10 @@ window/stretch/scale_mode="integer"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[gui]
+
+theme/custom_font="res://assets/fonts/Folies Bergere Medium.ttf"
+
 [input]
 
 character_up={

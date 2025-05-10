@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dto57u0glubq5"]
+[gd_scene load_steps=5 format=3 uid="uid://dto57u0glubq5"]
 
 [ext_resource type="Script" path="res://scenes/ui/level_select/level_icon.gd" id="1_jwdhi"]
 [ext_resource type="Texture2D" uid="uid://bvvup1b2c36p2" path="res://assets/sprites/ui/level_select/level_icons/level_icon_locked.png" id="2_drpms"]
+[ext_resource type="FontFile" uid="uid://dqhehd77i5bq6" path="res://assets/fonts/Folies Bergere Medium.ttf" id="3_cbhi2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ebgs"]
 resource_local_to_scene = true
-font_size = 28
+font = ExtResource("3_cbhi2")
+font_size = 30
 
 [node name="LevelIcon" type="Control"]
 layout_mode = 3
@@ -30,14 +32,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -19.5
-offset_right = 16.0
-offset_bottom = 19.5
+offset_left = -22.5
+offset_top = -15.5
+offset_right = 24.5
+offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "01"
+text = "00"
 label_settings = SubResource("LabelSettings_4ebgs")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-10, -10)
