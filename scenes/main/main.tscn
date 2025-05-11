@@ -196,6 +196,7 @@ layer = 2
 [node name="PauseMenuScreen" type="CanvasLayer" parent="."]
 process_mode = 3
 layer = 3
+visible = false
 script = ExtResource("10_224t2")
 
 [node name="Panel" type="Panel" parent="PauseMenuScreen"]
@@ -270,7 +271,6 @@ step = 0.001
 value = 1.0
 
 [node name="MainMenu" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("13_sq0eh")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
